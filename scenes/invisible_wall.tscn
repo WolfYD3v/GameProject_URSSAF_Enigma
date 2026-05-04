@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://7wy2ubhdo18w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig3pv"]
+size = Vector3(10, 5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig3pv"]
+size = Vector3(10, 5, 1)
+
+[node name="InvisibleWall" type="StaticBody3D" unique_id=317701860]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=908034421]
+shape = SubResource("BoxShape3D_ig3pv")
+debug_color = Color(0, 0.23137255, 0.27450982, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1565333875]
+visible = false
+mesh = SubResource("BoxMesh_ig3pv")

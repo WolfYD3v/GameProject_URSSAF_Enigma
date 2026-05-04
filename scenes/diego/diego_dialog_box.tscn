@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://u04c5w01w4kq"]
+
+[ext_resource type="Script" uid="uid://cpuvoqdmptm30" path="res://scenes/diego/diego_dialog_box.gd" id="1_ppss2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppss2"]
+bg_color = Color(0.23529412, 0.23529412, 0.23529412, 0.5882353)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 35
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 20
+
+[node name="DiegoDialogBox" type="Control" unique_id=217796290]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -142.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_ppss2")
+
+[node name="TextLabel" type="Label" parent="." unique_id=893074727]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ppss2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ppss2")
+text = "TEXT"
+autowrap_mode = 3

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d26f6w13md4eb"]
+
+[ext_resource type="Texture2D" uid="uid://7ghwtt2tg13u" path="res://assets/textures/metal_noise_texture.tres" id="1_7rrmu"]
+
+[resource]
+albedo_color = Color(0.27387273, 0.27387273, 0.27387273, 1)
+albedo_texture = ExtResource("1_7rrmu")
+metallic = 1.0
+metallic_specular = 0.2
+metallic_texture = ExtResource("1_7rrmu")
+roughness_texture = ExtResource("1_7rrmu")
+emission_enabled = true
+emission = Color(0.15686275, 0.15686275, 0.15686275, 1)

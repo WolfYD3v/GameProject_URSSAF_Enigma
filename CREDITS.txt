@@ -1,0 +1,28 @@
+Textures:
+- Map Ground: "Marble Floor Tiles Texture [Tileable | 2048x2048]" [ https://www.deviantart.com/fabooguy/art/Marble-Floor-Tiles-Texture-Tileable-2048x2048-436170199 ]
+BY FabooGuy [ https://www.deviantart.com/fabooguy/gallery ]
+- Wood: [ https://unblast.com/wp-content/uploads/2020/04/Seamless-Wood-Texture-5.jpg ]
+
+Videos:
+- Diego Explosion: [ https://pixabay.com/videos/explosion-green-screen-fire-bomb-240090/ ]
+BY Luis_Humanoide [ https://pixabay.com/users/luis_humanoide-12661853/ ]
+
+Diego's Voice:
+- Cuted Video Audio from: "Spanish skeleton argument (full version)" [ https://www.youtube.com/watch?v=yQbink5Zpps ]
+BY Spanish Skeleton [ xxx ]
+Websites used:
+	DeepL [ https://www.deepl.com/fr/translator ] -> Text from french to spanish
+	mp3cow [ https://mp3cow.com/ ] -> Download the video from Youtube
+
+Musics:
+- Main Menu Ambiance: "異界の地 Underworld" [ https://pixabay.com/music/ambient-%e7%95%b0%e7%95%8c%e3%81%ae%e5%9c%b0-underworld-263012/ ]
+BY nojisuma [ https://pixabay.com/users/nojisuma-23737290/ ]
+
+SFXs:
+- "JSFXR" [ https://sfxr.me/ ]
+- Train: "train" [ https://pixabay.com/sound-effects/city-train-493986/ ]
+BY kauasilbershlachparodes [ https://pixabay.com/users/kauasilbershlachparodes-54854723/ ]
+MODIFICATIONS: Shorted with Audacity
+- Player moving: "walk for cartoon" [ https://pixabay.com/sound-effects/film-special-effects-walk-for-cartoon-68633/ ]
+BY cupido-1 (Freesound) [ https://pixabay.com/users/freesound_community-46691455/ ]
+MODIFICATIONS: Shorted with Audacity

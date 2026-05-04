@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bplfr6e2wni0m"]
+
+[ext_resource type="Shader" uid="uid://dia371l2uj7do" path="res://assets/shaders/pixelation_shader.gdshader" id="1_52kms"]
+
+[resource]
+shader = ExtResource("1_52kms")
+shader_parameter/pixelation = 0.0030000001425
+shader_parameter/opacity = 1.0

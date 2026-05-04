@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c4wi0naffs5ly"]
+
+[ext_resource type="Script" uid="uid://dh381x7tqfgkg" path="res://scenes/menus/main_menu/main_menu_2d_interface.gd" id="1_wt25y"]
+
+[node name="MainMenu2DInterface" type="Control" unique_id=1759126058]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wt25y")
+
+[node name="GameNameLabel" type="Label" parent="." unique_id=714188475]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 110.0
+offset_bottom = 315.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 130
+text = "URSSAF Enigma"
+horizontal_alignment = 1
+
+[node name="StartInfoLabel" type="Label" parent="." unique_id=693319822]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -243.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 35
+text = "Press anything to start (or click)"
+horizontal_alignment = 1

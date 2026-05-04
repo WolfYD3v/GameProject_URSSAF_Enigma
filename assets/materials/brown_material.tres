@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqixq16fa7c31"]
+
+[ext_resource type="Texture2D" uid="uid://ccy3al1sjv0qm" path="res://assets/textures/brown_noise_texture.tres" id="1_hgaro"]
+
+[resource]
+albedo_texture = ExtResource("1_hgaro")
+metallic = 1.0
+metallic_specular = 0.0
+metallic_texture = ExtResource("1_hgaro")
+roughness_texture = ExtResource("1_hgaro")

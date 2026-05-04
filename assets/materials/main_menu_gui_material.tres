@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vx04eolas578"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kx65a"]
+viewport_path = NodePath("GUISubViewport")
+
+[resource]
+resource_local_to_scene = true
+transparency = 1
+cull_mode = 2
+specular_mode = 2
+albedo_texture = SubResource("ViewportTexture_kx65a")

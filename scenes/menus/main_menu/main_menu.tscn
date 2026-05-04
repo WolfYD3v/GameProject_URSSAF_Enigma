@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://fqkndeskr004"]
+
+[ext_resource type="Script" uid="uid://bic5btgsdpolf" path="res://scenes/menus/main_menu/main_menu.gd" id="1_kx65a"]
+[ext_resource type="Material" uid="uid://vx04eolas578" path="res://assets/materials/main_menu_gui_material.tres" id="2_flk2s"]
+[ext_resource type="PackedScene" uid="uid://c4wi0naffs5ly" path="res://scenes/menus/main_menu/main_menu_2d_interface.tscn" id="3_gm7d7"]
+[ext_resource type="AudioStream" uid="uid://ddex1sisbix88" path="res://assets/songs/main_menu_ambiance.mp3" id="4_peecx"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_gm7d7"]
+size = Vector2(3.5, 2)
+
+[node name="MainMenu" type="Node3D" unique_id=1195924135]
+process_mode = 3
+script = ExtResource("1_kx65a")
+
+[node name="GUI" type="MeshInstance3D" parent="." unique_id=2076394283]
+material_override = ExtResource("2_flk2s")
+mesh = SubResource("QuadMesh_gm7d7")
+
+[node name="GUISubViewport" type="SubViewport" parent="." unique_id=682400293]
+transparent_bg = true
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(1152, 648)
+
+[node name="MainMenu2DInterface" parent="GUISubViewport" unique_id=1759126058 instance=ExtResource("3_gm7d7")]
+
+[node name="SongAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1869172282]
+stream = ExtResource("4_peecx")
+volume_db = 15.0
+pitch_scale = 0.5

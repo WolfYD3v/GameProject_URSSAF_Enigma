@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dt8vg7fiv6e85"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_opipt"]
+viewport_path = NodePath("ExplosionSubViewport")
+
+[resource]
+resource_local_to_scene = true
+transparency = 1
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_opipt")
+billboard_mode = 2
