@@ -5,6 +5,7 @@ class_name Diego
 @onready var diego_dialog_box: DiegoDialogBox = $GUI/DiegoDialogBox
 @onready var explosion_video_stream_player: VideoStreamPlayer = $ExplosionSubViewport/ExplosionVideoStreamPlayer
 @onready var explosion_audio_stream_player_3d: AudioStreamPlayer3D = $ExplosionAudioStreamPlayer3D
+@onready var file_tool: FileTool = $FileTool
 
 @export var talk: bool = false:
 	set(value):
@@ -53,5 +54,19 @@ func explode() -> void:
 	explosion_audio_stream_player_3d.play()
 	await explosion_video_stream_player.finished
 	explosion_video_stream_player.hide()
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.0).timeout
+	await _try_download_my_file()
 	queue_free()
+
+func _try_download_my_file() -> void:
+	if Cryptographer._seleted_cryptography_methods.has("cesar"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		_save_my_file()
+		await file_tool.confirmed
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		
+		if file_tool.canceled: _try_download_my_file()
+
+func _save_my_file() -> void:
+	var file_content: String = "%d\ncesar" % SecretCodeManager.diego_rdm_number
+	file_tool.download_file("diego.txt", file_content)

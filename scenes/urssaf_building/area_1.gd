@@ -4,6 +4,7 @@ class_name UrssafBuilding_Area1
 @onready var train: Train = $Train
 @onready var invisible_wall_1: StaticBody3D = $InvisibleWall1
 @onready var diego: Diego = $Diego
+@onready var big_door: BigDoor = $BigDoor
 
 func _ready() -> void:
 	diego.hide()
@@ -27,6 +28,8 @@ func _on_intro_button_3d_pressed() -> void:
 	
 	await diego.diego_dialog_box.finished
 	invisible_wall_1.queue_free()
+	big_door.tween_doors()
+	get_parent().get_parent().try_show_area(2)
 
 func _on_player_leaving_trigger_area_body_entered(body: Node3D) -> void:
 	if body is Player and diego:

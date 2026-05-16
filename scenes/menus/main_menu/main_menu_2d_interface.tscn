@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c4wi0naffs5ly"]
 
+[ext_resource type="Theme" uid="uid://csp8roogyp1f5" path="res://assets/themes/main_theme.tres" id="1_jujbw"]
 [ext_resource type="Script" uid="uid://dh381x7tqfgkg" path="res://scenes/menus/main_menu/main_menu_2d_interface.gd" id="1_wt25y"]
 
 [node name="MainMenu2DInterface" type="Control" unique_id=1759126058]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_jujbw")
 script = ExtResource("1_wt25y")
 
 [node name="GameNameLabel" type="Label" parent="." unique_id=714188475]

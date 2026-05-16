@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://bfvbknjwli1wx"]
+
+[ext_resource type="Script" uid="uid://dqrwybsmpj6he" path="res://scenes/schrodinger_cat/schrodinger_cat_interface.gd" id="1_ulnyq"]
+[ext_resource type="Texture2D" uid="uid://jke1t7fwp314" path="res://assets/textures/cat_box.png" id="2_nmc6w"]
+[ext_resource type="Shader" uid="uid://dia371l2uj7do" path="res://assets/shaders/pixelation_shader.gdshader" id="2_ulnyq"]
+
+[sub_resource type="Gradient" id="Gradient_1xicw"]
+colors = PackedColorArray(0.45090783, 0.58413583, 0.1743716, 1, 0.70850223, 0.76638067, 0.44166225, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_iwu7u"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gun65"]
+width = 500
+height = 500
+noise = SubResource("FastNoiseLite_iwu7u")
+color_ramp = SubResource("Gradient_1xicw")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nmc6w"]
+shader = ExtResource("2_ulnyq")
+shader_parameter/pixelation = 0.0050000002375
+shader_parameter/opacity = 1.0
+
+[node name="SchrodingerCatInterface" type="Control" unique_id=1827865192]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ulnyq")
+
+[node name="Background" type="TextureRect" parent="." unique_id=312551106]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_gun65")
+expand_mode = 1
+
+[node name="BoxCatTexture" type="TextureRect" parent="." unique_id=1548982177]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -375.0
+offset_right = 375.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_nmc6w")
+stretch_mode = 4
+
+[node name="Terminal" type="RichTextLabel" parent="." unique_id=757165592]
+custom_minimum_size = Vector2(500, 450)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_right = 250.0
+offset_bottom = 450.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+scroll_following = true
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1157567208]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+show_percentage = false
+
+[node name="MistakesProgressBar" type="ProgressBar" parent="." unique_id=658943018]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 50.0
+offset_bottom = 85.0
+grow_horizontal = 2
+max_value = 3.0
+value = 3.0
+show_percentage = false
+
+[node name="RightBip" type="ColorRect" parent="." unique_id=678165216]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0, 0.5882353)
+
+[node name="WrongBip" type="ColorRect" parent="." unique_id=1945884199]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 0.5882353)
+
+[node name="PixelationShaderOverlay" type="ColorRect" parent="." unique_id=1259323996]
+material = SubResource("ShaderMaterial_nmc6w")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -2,21 +2,34 @@ Textures:
 - Map Ground: "Marble Floor Tiles Texture [Tileable | 2048x2048]" [ https://www.deviantart.com/fabooguy/art/Marble-Floor-Tiles-Texture-Tileable-2048x2048-436170199 ]
 BY FabooGuy [ https://www.deviantart.com/fabooguy/gallery ]
 - Wood: [ https://unblast.com/wp-content/uploads/2020/04/Seamless-Wood-Texture-5.jpg ]
+- Godot Logo: [ xxx ]
+- Game Jam Logo: From the Jam page [ https://itch.io/jam/indie-park-game-jam-5 ]
+- Sky: [ https://i.pinimg.com/originals/08/da/14/08da146435275f5cb02521be378bb4a5.jpg ]
+- Image Text Captcha Images: AI Generated (Gemini)
+MODIFICATIONS: Base File Modified with Krita (Isolation of Images from Source File)
 
 Videos:
 - Diego Explosion: [ https://pixabay.com/videos/explosion-green-screen-fire-bomb-240090/ ]
 BY Luis_Humanoide [ https://pixabay.com/users/luis_humanoide-12661853/ ]
 
-Diego's Voice:
-- Cuted Video Audio from: "Spanish skeleton argument (full version)" [ https://www.youtube.com/watch?v=yQbink5Zpps ]
+Voices:
+- Diego: "Spanish skeleton argument (full version)" [ https://www.youtube.com/watch?v=yQbink5Zpps ]
 BY Spanish Skeleton [ xxx ]
-Websites used:
-	DeepL [ https://www.deepl.com/fr/translator ] -> Text from french to spanish
-	mp3cow [ https://mp3cow.com/ ] -> Download the video from Youtube
+MODIFICATIONS: Shorted with Audacity
+WEBSITES USED:
+	DeepL [ https://www.deepl.com/fr/translator ] -> Text translated from french to spanish
+	mp3cow [ https://mp3cow.com/ ] -> Downloaded the video from Youtube on my laptop
+- Dev Intro (normal, crazy): [ https://lingojam.com/RobotVoiceGenerator ]
 
 Musics:
 - Main Menu Ambiance: "異界の地 Underworld" [ https://pixabay.com/music/ambient-%e7%95%b0%e7%95%8c%e3%81%ae%e5%9c%b0-underworld-263012/ ]
 BY nojisuma [ https://pixabay.com/users/nojisuma-23737290/ ]
+- Area2 Ambiance: "Chill Music" [ https://pixabay.com/fr/music/lofi-chill-music-491988/ ]
+BY MusicForPeople [ https://pixabay.com/fr/users/musicforpeople-54813385/ ]
+- Captcha Minigame Ambiance: "samba2" [ https://pixabay.com/fr/music/samba-latin-samba2-488493/ ]
+BY Meckavieira [ https://pixabay.com/fr/users/meckavieira-51704440/ ]
+- Cat Box Minigame Ambiance: "game 8 bit" [ https://pixabay.com/music/upbeat-game-8-bit-399898/ ]
+BY inono777 [ https://pixabay.com/users/inono777-52141374/ ]
 
 SFXs:
 - "JSFXR" [ https://sfxr.me/ ]
@@ -26,3 +39,21 @@ MODIFICATIONS: Shorted with Audacity
 - Player moving: "walk for cartoon" [ https://pixabay.com/sound-effects/film-special-effects-walk-for-cartoon-68633/ ]
 BY cupido-1 (Freesound) [ https://pixabay.com/users/freesound_community-46691455/ ]
 MODIFICATIONS: Shorted with Audacity
+- Wall Poping: "Pop SFX" [ https://www.myinstants.com/en/instant/pop-sfx-75405/ ]
+BY Gfox [ https://www.myinstants.com/en/profile/Gfox/ ]
+- Door Open: "door open" [ https://mariomayhem.com/downloads/sounds/mario_64_sound_effects/door-open.WAV ]
+FROM [ https://www.mariomayhem.com/downloads/sounds/super_mario_64_sound_effects.php ]
+- Captcha Minigame:
+	"family guy transition" [ https://www.myinstants.com/en/instant/family-guy-transition-10612/ ]
+BY Turner21 [ https://www.myinstants.com/en/profile/turner21/uploaded/ ]
+	"Fails - Ohhhh" [ https://www.myinstants.com/en/instant/fails-ohhhh-67464/ ]
+BY Okusama [ https://www.myinstants.com/en/profile/Okusama/uploaded/ ]
+- Cat Box Minigame:
+	"Roblox old winning sound effect" [ https://www.myinstants.com/en/instant/roblox-old-winning-sound-effect-38632/ ]
+BY Itsserena [ https://www.myinstants.com/en/profile/itsserena/uploaded/ ]
+	"Error SOUNDSS" [ https://www.myinstants.com/en/instant/error-soundss-25534/ ]
+BY Memeboiii [ https://www.myinstants.com/en/profile/MemeBoiii/uploaded/ ]
+
+Fonts:
+- "Bricolage Grotesque" [ https://fonts.google.com/specimen/Bricolage+Grotesque?preview.script=Latn ]
+FROM Google Fonts [ https://fonts.google.com/ ]

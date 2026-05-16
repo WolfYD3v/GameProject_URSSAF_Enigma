@@ -1,0 +1,36 @@
+[gd_resource type="VisualShader" format=3 uid="uid://bkuawdlet8k3y"]
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_ka5nv"]
+default_input_values = [0, 1.0, 1, 0.0]
+operator = 1
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_j6on4"]
+output_port_for_preview = 0
+expanded_output_ports = [0]
+source = 1
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_j6on4"]
+parameter_name = "brightness"
+hint = 2
+min = 0.05
+max = 2.0
+step = 0.05
+default_value_enabled = true
+default_value = 1.0
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_j6on4"]
+
+[resource]
+mode = 1
+flags/light_only = false
+preview_params/brightness = "1.0"
+nodes/fragment/0/position = Vector2(900, 240)
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatOp_ka5nv")
+nodes/fragment/6/position = Vector2(520, 240)
+nodes/fragment/7/node = SubResource("VisualShaderNodeTexture_j6on4")
+nodes/fragment/7/position = Vector2(0, 240)
+nodes/fragment/8/node = SubResource("VisualShaderNodeFloatParameter_j6on4")
+nodes/fragment/8/position = Vector2(200, -100)
+nodes/fragment/9/node = SubResource("VisualShaderNodeVectorCompose_j6on4")
+nodes/fragment/9/position = Vector2(320, 240)
+nodes/fragment/connections = PackedInt32Array(6, 0, 0, 0, 8, 0, 6, 0, 7, 4, 0, 1, 7, 1, 9, 0, 7, 2, 9, 1, 7, 3, 9, 2, 9, 0, 6, 1)

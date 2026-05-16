@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvm8nillivq6b"
+path="res://.godot/imported/ABBA - Money, Money, Money (Official Music Video).mp3-1df416c910c259c6203735138baabf9e.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/ABBA - Money, Money, Money (Official Music Video).mp3"
+dest_files=["res://.godot/imported/ABBA - Money, Money, Money (Official Music Video).mp3-1df416c910c259c6203735138baabf9e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

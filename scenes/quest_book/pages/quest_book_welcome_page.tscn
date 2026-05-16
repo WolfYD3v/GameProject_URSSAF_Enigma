@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bcdflky62iefu"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_0cxxa"]
+[ext_resource type="Texture2D" uid="uid://bysa0eb23tcjf" path="res://icon.svg" id="2_bxmd5"]
+
+[node name="QuestBookWelcomePage" unique_id=1413710666 instance=ExtResource("1_0cxxa")]
+
+[node name="TitleRichTextLabel" parent="Left/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]URSSAF Safe Code: The Basics[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=546952349]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Hello there, {person responsable's name of opening the safe} .
+This book is like your sorta of a employee handbook, but without all the stupid rules maybe writen by a HR old grumpy lady . Yes .
+
+So, the safe is locked (to protect safely the tasty money stored inside) . To be sure about the solidity of the security, a secret code of 100 characters have to be inputed .
+To learn more about the secret code, just go to the next page .
+
+As the official person that own this \"handbook\", it's YOUR role to keep it ONLY for you as MUCH as POSSIBLE .
+The Direction don't want to see the Key of our security leeks out (and you don't want too) . It's OUR money !!!!!
+
+[revision]
+Since 2018, the French gouvernment has decided to \"punish us for our bad behavoir\", by freezing the money inside the safe . As if we are greddy !
+So we hired Diego, to try to get back OUR money .
+And now it's your role to find the secret code, to unlock the safe (they didn't do anything to stop that...)
+You succed, or you die . Simple ennought ."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=288541257]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b][u]This book have strange powers[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=152059399]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Some retiries told the Direction about strange things hapening around them, like things spawning/disapearing in the room, or the book giving access to more and more pages .
+Why ?
+Because, I guess (I, as the writer of the handbook) .
+
+And sometimes, it rewards you for unlocking pages with amazing rewards !
+How nice it is :)
+
+As a good employe, you have to embrace his Holy grace .
+Maybe it will help you in your mission, who know ?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=1507882798]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=692206404]
+layout_mode = 2
+texture = ExtResource("2_bxmd5")
+stretch_mode = 3

@@ -64,7 +64,7 @@ func _press() -> void:
 
 func _on_player_detection_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player:
-		if not body.is_crouching: player_detected = true
+		player_detected = not(body.is_crouching)
 
 func _on_player_detection_area_3d_body_exited(body: Node3D) -> void:
 	if body is Player:

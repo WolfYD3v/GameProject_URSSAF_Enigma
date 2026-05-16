@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyfvqrfoqbnok"
+path="res://.godot/imported/Je possède des thunes (Clip Intégral) - David Castello-Lopes.mp3-1d585c7d7e2e94496a4ab74ecad206e2.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Je possède des thunes (Clip Intégral) - David Castello-Lopes.mp3"
+dest_files=["res://.godot/imported/Je possède des thunes (Clip Intégral) - David Castello-Lopes.mp3-1d585c7d7e2e94496a4ab74ecad206e2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

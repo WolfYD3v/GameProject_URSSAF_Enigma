@@ -18,6 +18,11 @@ var max_camera_x_rotation: float = deg_to_rad(50.0)
 var is_jumping: bool = false
 var is_crouching: bool = false
 
+var can_move: bool = true
+var can_jump: bool = true
+var can_crouch: bool = true
+var can_rotate: bool = true
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -32,6 +37,7 @@ func _physics_process(delta: float) -> void:
 	handle_crouch()
 	handle_jump()
 	handle_mouvement()
+	move_and_slide()
 	handle_walk_sound()
 
 func handle_gravity(delta: float) -> void:
@@ -39,7 +45,7 @@ func handle_gravity(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 func handle_crouch() -> void:
-	if not is_on_floor(): return
+	if not is_on_floor() or not can_crouch: return
 	if Input.is_action_just_pressed("player_crouch_toggle"):
 		is_crouching = not(is_crouching)
 		
@@ -51,13 +57,14 @@ func handle_crouch() -> void:
 		)
 
 func handle_rotation(event: InputEvent) -> void:
-	rotate_y(-event.relative.x * mouse_sensitivity * accel)
-	camera.rotate_x(-event.relative.y * mouse_sensitivity * accel)
-	
-	camera.rotation.x = clampf(
-		camera.rotation.x, -max_camera_x_rotation,
-		max_camera_x_rotation
-	)
+	if can_rotate:
+		rotate_y(-event.relative.x * mouse_sensitivity * accel)
+		camera.rotate_x(-event.relative.y * mouse_sensitivity * accel)
+		
+		camera.rotation.x = clampf(
+			camera.rotation.x, -max_camera_x_rotation,
+			max_camera_x_rotation
+		)
 
 func set_accel() -> void:
 	if direction and Input.is_action_pressed("player_run_toggle") and not is_crouching:
@@ -73,32 +80,32 @@ func set_speed() -> void:
 	speed *= accel
 
 func handle_jump() -> void:
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_crouching:
-		walk_audio_stream_player_3d.stop()
-		is_jumping = true
-		velocity.y = jump_velocity * speed
+	if can_jump:
+		if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_crouching:
+			walk_audio_stream_player_3d.stop()
+			is_jumping = true
+			velocity.y = jump_velocity * speed
 
 func handle_mouvement() -> void:
-	var input_dir := Input.get_vector(
-		"player_right", "player_left",
-		"player_up", "player_down"
-	)
-	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
-	else:
-		walk_audio_stream_player_3d.stop()
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
-	
-	move_and_slide()
+	if can_move:
+		var input_dir := Input.get_vector(
+			"player_right", "player_left",
+			"player_up", "player_down"
+		)
+		direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if direction:
+			velocity.x = direction.x * speed
+			velocity.z = direction.z * speed
+		else:
+			walk_audio_stream_player_3d.stop()
+			velocity.x = move_toward(velocity.x, 0, speed)
+			velocity.z = move_toward(velocity.z, 0, speed)
 
 func handle_walk_sound() -> void:
 	if walk_audio_stream_player_3d.playing or is_jumping or is_crouching: return
 	if direction:
 		walk_audio_stream_player_3d.pitch_scale = randf_range(
-			0.90 * accel,
-			1.10 * accel
+			0.80 * accel,
+			1.20 * accel
 		)
 		walk_audio_stream_player_3d.play()

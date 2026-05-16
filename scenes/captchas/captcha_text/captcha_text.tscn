@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ojrkqgdhyj1c"]
+
+[ext_resource type="PackedScene" uid="uid://dv0b246sriwrh" path="res://scenes/captchas/base_captcha.tscn" id="1_bno16"]
+[ext_resource type="Script" uid="uid://ng1ggqqed6h0" path="res://scenes/captchas/captcha_text/captcha_text.gd" id="2_jftr8"]
+[ext_resource type="Texture2D" uid="uid://8fspo8cj2vbv" path="res://assets/textures/wall_texture.jpg" id="3_gy524"]
+[ext_resource type="AudioStream" uid="uid://de8p02ir1r5wy" path="res://assets/sfxs/fails-ohhhh.mp3" id="4_5gshv"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5gshv"]
+
+[node name="CaptchaText" unique_id=567034842 instance=ExtResource("1_bno16")]
+script = ExtResource("2_jftr8")
+
+[node name="ImageTextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1931109650) index="0" unique_id=938202820]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_gy524")
+expand_mode = 1
+
+[node name="AnswerLineEdit" type="LineEdit" parent="Control/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1931109650) index="1" unique_id=85774028]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 1
+placeholder_text = "answer... (7 characters max.)"
+alignment = 1
+max_length = 7
+
+[node name="AttempsProgressBar" type="ProgressBar" parent="Control" parent_id_path=PackedInt32Array(1875744271) index="2" unique_id=2147090874]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+grow_horizontal = 0
+grow_vertical = 2
+value = 74.35
+fill_mode = 3
+show_percentage = false
+
+[node name="OhhhAudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5" unique_id=1563934194]
+stream = ExtResource("4_5gshv")
+
+[node name="AnimationPlayer" parent="." index="6" unique_id=1177671547]
+libraries/ = SubResource("AnimationLibrary_5gshv")
+
+[connection signal="text_changed" from="Control/MarginContainer/VBoxContainer/AnswerLineEdit" to="." method="_on_answer_line_edit_text_changed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/CheckAnswerButton" to="." method="_on_check_answer_button_pressed_bis"]
+[connection signal="value_changed" from="Control/AttempsProgressBar" to="." method="_on_attemps_progress_bar_value_changed"]

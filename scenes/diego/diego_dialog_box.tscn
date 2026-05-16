@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://u04c5w01w4kq"]
 
+[ext_resource type="Theme" uid="uid://csp8roogyp1f5" path="res://assets/themes/main_theme.tres" id="1_1750l"]
 [ext_resource type="Script" uid="uid://cpuvoqdmptm30" path="res://scenes/diego/diego_dialog_box.gd" id="1_ppss2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppss2"]
@@ -24,6 +25,7 @@ anchor_bottom = 1.0
 offset_top = -142.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("1_1750l")
 script = ExtResource("1_ppss2")
 
 [node name="TextLabel" type="Label" parent="." unique_id=893074727]

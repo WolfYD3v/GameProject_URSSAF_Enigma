@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dmuknannnqj2q"]
+
+[ext_resource type="Material" uid="uid://dlqrjbft8gtx3" path="res://assets/materials/marbre_material.tres" id="1_0mfnc"]
+[ext_resource type="Script" uid="uid://cu0m8n0bc7sme" path="res://scenes/3d_button/3d_button.gd" id="1_pu6s6"]
+[ext_resource type="Material" uid="uid://pnsx14q34qtw" path="res://assets/materials/urssaf_building_wall_bar_material.tres" id="3_degnk"]
+[ext_resource type="Material" uid="uid://5f402puxalho" path="res://assets/materials/control_indication_material.tres" id="4_degnk"]
+[ext_resource type="Material" uid="uid://doviwov656seo" path="res://assets/materials/green_transparent_material.tres" id="5_nec3l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lmbc0"]
+size = Vector3(0.3, 0.15, 0.15)
+
+[sub_resource type="TextMesh" id="TextMesh_pu6s6"]
+text = "text here"
+font_size = 5
+autowrap_mode = 3
+width = 30.0
+
+[sub_resource type="TextMesh" id="TextMesh_nec3l"]
+text = "[click]"
+font_size = 10
+depth = 0.02
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pu6s6"]
+size = Vector3(0.3, 0.2, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_degnk"]
+size = Vector3(0.32, 0.2, 0.17)
+
+[node name="3DButton" type="MeshInstance3D" unique_id=1980798425]
+material_override = ExtResource("1_0mfnc")
+mesh = SubResource("BoxMesh_lmbc0")
+script = ExtResource("1_pu6s6")
+
+[node name="TextMesh" type="MeshInstance3D" parent="." unique_id=1488032965]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.059807546, 0)
+material_override = ExtResource("3_degnk")
+mesh = SubResource("TextMesh_pu6s6")
+
+[node name="ControlIndication" type="MeshInstance3D" parent="." unique_id=632006804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
+material_override = ExtResource("4_degnk")
+mesh = SubResource("TextMesh_nec3l")
+
+[node name="MouseDetedtionArea" type="Area3D" parent="." unique_id=238170810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02470389, 0)
+
+[node name="CollisionShape" type="CollisionShape3D" parent="MouseDetedtionArea" unique_id=430327774]
+shape = SubResource("BoxShape3D_pu6s6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MouseDetedtionArea" unique_id=1189207738]
+material_override = ExtResource("5_nec3l")
+mesh = SubResource("BoxMesh_degnk")
+
+[node name="Timer" type="Timer" parent="." unique_id=1788339742]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="mouse_entered" from="MouseDetedtionArea" to="." method="_on_mouse_detedtion_area_mouse_entered"]
+[connection signal="mouse_exited" from="MouseDetedtionArea" to="." method="_on_mouse_detedtion_area_mouse_exited"]

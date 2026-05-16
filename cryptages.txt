@@ -1,0 +1,19 @@
+## Substitution mono-alphabétique (IXe siècle)
+
+![Substitution mono-alphabétique](https://upload.wikimedia.org/wikipedia/commons/e/ea/Substitution_cipher.svg)
+
+### Explication
+On remplace chaque lettre par une autre, selon un tableau de correspondance fixe.
+Contrairement au César, le remplacement n’obéit à aucune logique de décalage.
+
+```
+Clair : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Chiffré : ZEBRASCDFGHIJKLMNOPQTUVWXY
+```
+
+
+
+## Binaire
+
+### Explication
+On converti en binaire

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bjnrxslhcdcbg"]
+
+[ext_resource type="Material" uid="uid://21bxbsy3hy8r" path="res://assets/materials/urssaf_map_ground.tres" id="1_1vpvo"]
+[ext_resource type="Environment" uid="uid://bekbo647gqq44" path="res://assets/envs/urssaf_building_env.tres" id="1_odkqe"]
+[ext_resource type="PackedScene" uid="uid://bm6cd8qpbumo8" path="res://scenes/quest_book/quest_book.tscn" id="1_rpe77"]
+[ext_resource type="PackedScene" uid="uid://dt36ujcrxnvd4" path="res://scenes/player/player.tscn" id="3_6h0sd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6h0sd"]
+size = Vector3(50, 0.2, 50)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_odkqe"]
+data = PackedVector3Array(-25, 0.099999994, 25, 25, 0.099999994, 25, -25, -0.099999994, 25, 25, 0.099999994, 25, 25, -0.099999994, 25, -25, -0.099999994, 25, 25, 0.099999994, -25, -25, 0.099999994, -25, 25, -0.099999994, -25, -25, 0.099999994, -25, -25, -0.099999994, -25, 25, -0.099999994, -25, 25, 0.099999994, 25, 25, 0.099999994, -25, 25, -0.099999994, 25, 25, 0.099999994, -25, 25, -0.099999994, -25, 25, -0.099999994, 25, -25, 0.099999994, -25, -25, 0.099999994, 25, -25, -0.099999994, -25, -25, 0.099999994, 25, -25, -0.099999994, 25, -25, -0.099999994, -25, 25, 0.099999994, 25, -25, 0.099999994, 25, 25, 0.099999994, -25, -25, 0.099999994, 25, -25, 0.099999994, -25, 25, 0.099999994, -25, -25, -0.099999994, 25, 25, -0.099999994, 25, -25, -0.099999994, -25, 25, -0.099999994, 25, 25, -0.099999994, -25, -25, -0.099999994, -25)
+
+[node name="QuestBookTest" type="Node3D" unique_id=751601938]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=771181026]
+environment = ExtResource("1_odkqe")
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=1289760467]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1511987617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5180876, 0)
+material_override = ExtResource("1_1vpvo")
+mesh = SubResource("BoxMesh_6h0sd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=908247747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5180876, 0)
+shape = SubResource("ConcavePolygonShape3D_odkqe")
+
+[node name="QuestBook" parent="." unique_id=394916263 instance=ExtResource("1_rpe77")]
+
+[node name="Player" parent="." unique_id=1693391434 instance=ExtResource("3_6h0sd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)

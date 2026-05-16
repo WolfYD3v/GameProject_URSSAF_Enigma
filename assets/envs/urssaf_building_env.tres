@@ -1,5 +1,18 @@
 [gd_resource type="Environment" format=3 uid="uid://bekbo647gqq44"]
 
+[ext_resource type="Texture2D" uid="uid://bg0bt4gny3xb5" path="res://assets/textures/sky_texture.jpeg" id="1_7x0a6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jo1o5"]
+sky_top_color = Color(0.34509805, 0.40784314, 0.5019608, 1)
+sky_horizon_color = Color(0.48518455, 0.5544137, 0.6582065, 1)
+sky_energy_multiplier = 0.5
+sky_cover = ExtResource("1_7x0a6")
+sun_angle_max = 200.0
+
+[sub_resource type="Sky" id="Sky_6lj27"]
+sky_material = SubResource("ProceduralSkyMaterial_jo1o5")
+
 [resource]
-background_mode = 1
-background_color = Color(0.3437818, 0.4097799, 0.5032911, 1)
+background_mode = 2
+sky = SubResource("Sky_6lj27")
+ambient_light_color = Color(0.34509805, 0.40784314, 0.5019608, 1)

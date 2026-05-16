@@ -2,89 +2,401 @@
 
 [ext_resource type="Script" uid="uid://cxijkqhdkio6y" path="res://scenes/menus/dev_intro_menu/dev_intro_menu.gd" id="1_joss0"]
 [ext_resource type="Texture2D" uid="uid://c7mllartxsbsn" path="res://assets/textures/wolfyd3v_pp_texture.png" id="2_se7f2"]
-[ext_resource type="Texture2D" uid="uid://bysa0eb23tcjf" path="res://icon.svg" id="3_vyrqf"]
+[ext_resource type="Material" uid="uid://21bxbsy3hy8r" path="res://assets/materials/urssaf_map_ground.tres" id="2_xrd6a"]
+[ext_resource type="PackedScene" uid="uid://bnym52edfa4e5" path="res://scenes/radio/radio.tscn" id="4_lph5o"]
+[ext_resource type="AudioStream" uid="uid://b1laex4v5ib7k" path="res://assets/voices/dev_intro_normal_voice.wav" id="4_w3rgr"]
+[ext_resource type="Texture2D" uid="uid://bduywcmrgl02h" path="res://assets/textures/godot_logo_texture.png" id="6_kaydl"]
+[ext_resource type="Theme" uid="uid://csp8roogyp1f5" path="res://assets/themes/main_theme.tres" id="6_w3rgr"]
+[ext_resource type="Texture2D" uid="uid://dak41620cqtqh" path="res://assets/textures/jam_logo_texture.png" id="8_w3rgr"]
+[ext_resource type="AudioStream" uid="uid://1kl5yykt3fdj" path="res://assets/songs/INTRO_cold-wind-ambience-404245.mp3" id="9_ge0gh"]
+[ext_resource type="PackedScene" uid="uid://bj5gg1j8dw7u1" path="res://scenes/invert_colors_shader_overlay.tscn" id="9_sh0y7"]
+[ext_resource type="AudioStream" uid="uid://ce4spu1usoyas" path="res://assets/sfxs/train_sfx.mp3" id="11_sh0y7"]
 
-[sub_resource type="Gradient" id="Gradient_vyrqf"]
-interpolation_mode = 2
-offsets = PackedFloat32Array(0.011450382, 1)
-colors = PackedColorArray(0.12793347, 0.2854601, 0.25137264, 1, 0.014659062, 0.37088084, 0.18770209, 1)
+[sub_resource type="Environment" id="Environment_vyrqf"]
+background_mode = 1
+background_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
+fog_enabled = true
+fog_light_color = Color(0.15686275, 0.15686275, 0.15686275, 1)
+fog_density = 0.5
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_lph5o"]
-gradient = SubResource("Gradient_vyrqf")
-width = 60
-height = 60
-fill_to = Vector2(1, 1)
+[sub_resource type="BoxMesh" id="BoxMesh_kaydl"]
+size = Vector3(50, 0.2, 50)
 
-[node name="DevIntroMenu" type="Control" unique_id=212422771]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k5j1w"]
+data = PackedVector3Array(-25, 0.099999994, 25, 25, 0.099999994, 25, -25, -0.099999994, 25, 25, 0.099999994, 25, 25, -0.099999994, 25, -25, -0.099999994, 25, 25, 0.099999994, -25, -25, 0.099999994, -25, 25, -0.099999994, -25, -25, 0.099999994, -25, -25, -0.099999994, -25, 25, -0.099999994, -25, 25, 0.099999994, 25, 25, 0.099999994, -25, 25, -0.099999994, 25, 25, 0.099999994, -25, 25, -0.099999994, -25, 25, -0.099999994, 25, -25, 0.099999994, -25, -25, 0.099999994, 25, -25, -0.099999994, -25, -25, 0.099999994, 25, -25, -0.099999994, 25, -25, -0.099999994, -25, 25, 0.099999994, 25, -25, 0.099999994, 25, 25, 0.099999994, -25, -25, 0.099999994, 25, -25, 0.099999994, -25, 25, 0.099999994, -25, -25, -0.099999994, 25, 25, -0.099999994, 25, -25, -0.099999994, -25, 25, -0.099999994, 25, 25, -0.099999994, -25, -25, -0.099999994, -25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lph5o"]
+albedo_texture = ExtResource("2_se7f2")
+
+[sub_resource type="QuadMesh" id="QuadMesh_xrd6a"]
+size = Vector2(3.5, 3.5)
+
+[sub_resource type="Animation" id="Animation_xrd6a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1, 20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [45.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GUI/Control:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AmbianceAudioStreamPlayer:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WorldEnvironment:environment:background_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.19607843, 0.19607843, 0.19607843, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("WorldEnvironment:environment:fog_density")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_vyrqf"]
+resource_name = "intro"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9.6),
+"transitions": PackedFloat32Array(-2, -0.5),
+"update": 0,
+"values": [Vector3(0, 1, 20), Vector3(0, 1.5, -4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(-2, -0.5),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.6981317, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 9.5),
+"transitions": PackedFloat32Array(-2, -0.5),
+"update": 0,
+"values": [75.0, 45.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GUI/Control:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 8.5, 12.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Radio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(9.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"play"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AmbianceAudioStreamPlayer:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 8.8, 12.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -10.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("WorldEnvironment:environment:background_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 8, 9.5, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.19607843, 0.19607843, 0.19607843, 1), Color(0.15686275, 0.15686275, 0.15686275, 1), Color(0.15686275, 0.15686275, 0.15686275, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("WorldEnvironment:environment:fog_density")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 9, 12.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.75, 0.55]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lph5o"]
+_data = {
+&"RESET": SubResource("Animation_xrd6a"),
+&"intro": SubResource("Animation_vyrqf")
+}
+
+[node name="DevIntroMenu" type="Node3D" unique_id=525105778]
+script = ExtResource("1_joss0")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=880338826]
+environment = SubResource("Environment_vyrqf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1998733193]
+transform = Transform3D(0.70710677, 0.5, -0.50000006, 0, 0.7071068, 0.70710677, 0.7071068, -0.49999997, 0.5, 0, 30, 30)
+light_color = Color(0.27450982, 0.27450982, 0.27450982, 1)
+shadow_enabled = true
+
+[node name="Camera" type="Camera3D" parent="." unique_id=1220950828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 20)
+fov = 45.0
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=372142450]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=612194461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5180876, 0)
+material_override = ExtResource("2_xrd6a")
+mesh = SubResource("BoxMesh_kaydl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=551303354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5180876, 0)
+shape = SubResource("ConcavePolygonShape3D_k5j1w")
+
+[node name="Radio" parent="." unique_id=1403301068 instance=ExtResource("4_lph5o")]
+transform = Transform3D(0.4330127, 0, -0.25, 0, 0.5, 0, 0.25, 0, 0.4330127, 0, 0.18366867, -5)
+songs = Array[AudioStream]([ExtResource("4_w3rgr")])
+repeat = false
+
+[node name="Me" type="MeshInstance3D" parent="." unique_id=2051659382]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -2.5, -4, -4.5)
+material_override = SubResource("StandardMaterial3D_lph5o")
+mesh = SubResource("QuadMesh_xrd6a")
+
+[node name="GUI" type="CanvasLayer" parent="." unique_id=434392648]
+
+[node name="Control" type="Control" parent="GUI" unique_id=1963243932]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_joss0")
+theme = ExtResource("6_w3rgr")
 
-[node name="Background" type="TextureRect" parent="." unique_id=1309650294]
+[node name="Background" type="ColorRect" parent="GUI/Control" unique_id=1099460860]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_lph5o")
+color = Color(0, 0, 0, 0.5882353)
 
-[node name="MeTextureRect" type="TextureRect" parent="." unique_id=467300411]
-layout_mode = 0
-offset_left = 34.0
-offset_top = 31.0
-offset_right = 284.0
-offset_bottom = 281.0
+[node name="GUI" type="HBoxContainer" parent="GUI/Control" unique_id=529299803]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="SeparationArea1" type="ColorRect" parent="GUI/Control/GUI" unique_id=308401686]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="GUI/Control/GUI" unique_id=472380069]
+layout_mode = 2
+alignment = 1
+
+[node name="GodotTexture" type="TextureRect" parent="GUI/Control/GUI/VBoxContainer1" unique_id=977444626]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("6_kaydl")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="SeparationArea" type="ColorRect" parent="GUI/Control/GUI/VBoxContainer1" unique_id=1716647873]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="MeTexture" type="TextureRect" parent="GUI/Control/GUI/VBoxContainer1" unique_id=1503616684]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
 texture = ExtResource("2_se7f2")
 expand_mode = 1
+stretch_mode = 6
 
-[node name="Label" type="Label" parent="." unique_id=413999930]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 296.0
-offset_right = 352.0
-offset_bottom = 331.0
-theme_override_font_sizes/font_size = 25
+[node name="MeLabel" type="Label" parent="GUI/Control/GUI/VBoxContainer1" unique_id=1442709640]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
 text = "A WolfY_D3v production"
-horizontal_alignment = 2
-
-[node name="GodotTextureRect" type="TextureRect" parent="." unique_id=1382187162]
-layout_mode = 0
-offset_left = 509.0
-offset_top = 425.0
-offset_right = 659.0
-offset_bottom = 575.0
-texture = ExtResource("3_vyrqf")
-expand_mode = 1
-
-[node name="Label2" type="Label" parent="." unique_id=480752149]
-layout_mode = 0
-offset_left = 371.0
-offset_top = 583.0
-offset_right = 666.0
-offset_bottom = 611.0
-theme_override_font_sizes/font_size = 20
-text = "Made with Godot"
 horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="IndieParkJamTextureRect" type="TextureRect" parent="." unique_id=2084275105]
-layout_mode = 0
-offset_left = 815.0
-offset_top = 113.0
-offset_right = 995.0
-offset_bottom = 293.0
-texture = ExtResource("3_vyrqf")
+[node name="SeparationArea2" type="ColorRect" parent="GUI/Control/GUI" unique_id=1141057430]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GUI/Control/GUI" unique_id=807647778]
+layout_mode = 2
+alignment = 1
+
+[node name="JamLabel" type="Label" parent="GUI/Control/GUI/VBoxContainer2" unique_id=1758752793]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+text = "Made for the"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="JamTexture" type="TextureRect" parent="GUI/Control/GUI/VBoxContainer2" unique_id=597454230]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+texture = ExtResource("8_w3rgr")
 expand_mode = 1
+stretch_mode = 6
 
-[node name="Label3" type="Label" parent="." unique_id=611819593]
-layout_mode = 0
-offset_left = 830.0
-offset_top = 82.0
-offset_right = 995.0
-offset_bottom = 110.0
-theme_override_font_sizes/font_size = 20
-text = "4 da"
+[node name="SeparationArea3" type="ColorRect" parent="GUI/Control/GUI" unique_id=1609138119]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Label" type="Label" parent="GUI" unique_id=1048597547]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -13.0
+offset_right = 623.0
+offset_bottom = 1136.0
+grow_vertical = 0
+rotation = -1.5707964
+theme = ExtResource("6_w3rgr")
+theme_override_font_sizes/font_size = 50
+text = "Two Floors
+
+
+
+The Between
+
+
+
+
+
+
+From Hell
+
+
+
+
+
+To Heaven"
+
+[node name="InvertColorsShaderOverlay" parent="GUI" unique_id=1008456366 instance=ExtResource("9_sh0y7")]
+
+[node name="AmbianceAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1390851905]
+stream = ExtResource("9_ge0gh")
+autoplay = true
+parameters/looping = true
+
+[node name="SFXAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1902826900]
+stream = ExtResource("11_sh0y7")
+volume_db = 5.0
+pitch_scale = 4.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=723520931]
+libraries/ = SubResource("AnimationLibrary_lph5o")

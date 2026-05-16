@@ -1,10 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bxlue68p3k3jb"]
 
-[ext_resource type="Texture2D" uid="uid://bi4cxyoybr4rg" path="res://assets/textures/ground_texture.jpg" id="1_uipf1"]
+[ext_resource type="Texture2D" uid="uid://c5s3w8xk07tcr" path="res://assets/textures/urssaf_building_roof_noise_texture.tres" id="1_uipf1"]
 
 [resource]
-albedo_color = Color(0.39215687, 0.39215687, 0.39215687, 1)
 albedo_texture = ExtResource("1_uipf1")
-uv1_scale = Vector3(0.04, 0.04, 0.04)
-uv1_offset = Vector3(-0.32, 0, -0.14)
-uv1_triplanar = true

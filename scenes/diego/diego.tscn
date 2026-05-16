@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://u04c5w01w4kq" path="res://scenes/diego/diego_dialog_box.tscn" id="4_tbakm"]
 [ext_resource type="Material" uid="uid://cyr0ex347isvp" path="res://assets/materials/black_material.tres" id="5_opipt"]
 [ext_resource type="VideoStream" uid="uid://dsxvp782rt3qo" path="res://assets/videos/240092.ogv" id="7_soa7m"]
+[ext_resource type="PackedScene" uid="uid://dwtxilurp5xgk" path="res://scenes/file_tool/file_tool.tscn" id="9_b3ayj"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4bdai"]
 
@@ -38,6 +39,8 @@ resource_local_to_scene = true
 transparency = 1
 cull_mode = 2
 albedo_texture = SubResource("ViewportTexture_opipt")
+billboard_mode = 2
+billboard_keep_scale = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_opipt"]
 size = Vector2(3, 3)
@@ -90,30 +93,8 @@ transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 0, 0
 material_override = ExtResource("5_opipt")
 mesh = SubResource("TextMesh_ioaqi")
 
-[node name="Explosions" type="Node3D" parent="." unique_id=499535438]
-
-[node name="ExplosionMesh1" type="MeshInstance3D" parent="Explosions" unique_id=545915615]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.8)
-material_override = SubResource("StandardMaterial3D_soa7m")
-mesh = SubResource("QuadMesh_opipt")
-
-[node name="ExplosionMesh2" type="MeshInstance3D" parent="Explosions" unique_id=1736824099]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, 0.29999995)
-material_override = SubResource("StandardMaterial3D_soa7m")
-mesh = SubResource("QuadMesh_opipt")
-
-[node name="ExplosionMesh3" type="MeshInstance3D" parent="Explosions" unique_id=1216119198]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -1.2)
-material_override = SubResource("StandardMaterial3D_soa7m")
-mesh = SubResource("QuadMesh_opipt")
-
-[node name="ExplosionMesh4" type="MeshInstance3D" parent="Explosions" unique_id=319748468]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -1.5, 0, 0.29999995)
-material_override = SubResource("StandardMaterial3D_soa7m")
-mesh = SubResource("QuadMesh_opipt")
-
-[node name="ExplosionMesh5" type="MeshInstance3D" parent="Explosions" unique_id=1580467655]
-transform = Transform3D(-5.732056e-15, 1, 4.371139e-08, -1.3113416e-07, -4.371139e-08, 1, 1, 0, 1.3113416e-07, 0, 1.5, 0.29999995)
+[node name="ExplosionMesh" type="MeshInstance3D" parent="." unique_id=545915615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 material_override = SubResource("StandardMaterial3D_soa7m")
 mesh = SubResource("QuadMesh_opipt")
 
@@ -132,8 +113,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("7_soa7m")
-volume_db = 23.999998
+volume_db = 23.999992
 speed_scale = 10.0
 expand = true
+
+[node name="FileTool" parent="." unique_id=1806613440 instance=ExtResource("9_b3ayj")]
 
 [connection signal="finished" from="GUI/DiegoDialogBox" to="." method="stop_talk"]

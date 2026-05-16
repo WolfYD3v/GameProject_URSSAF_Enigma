@@ -1,9 +1,20 @@
 [gd_scene format=3 uid="uid://fqkndeskr004"]
 
 [ext_resource type="Script" uid="uid://bic5btgsdpolf" path="res://scenes/menus/main_menu/main_menu.gd" id="1_kx65a"]
-[ext_resource type="Material" uid="uid://vx04eolas578" path="res://assets/materials/main_menu_gui_material.tres" id="2_flk2s"]
 [ext_resource type="PackedScene" uid="uid://c4wi0naffs5ly" path="res://scenes/menus/main_menu/main_menu_2d_interface.tscn" id="3_gm7d7"]
+[ext_resource type="Texture2D" uid="uid://b1qv54sa5xgun" path="res://assets/textures/him.png" id="3_x31ro"]
 [ext_resource type="AudioStream" uid="uid://ddex1sisbix88" path="res://assets/songs/main_menu_ambiance.mp3" id="4_peecx"]
+[ext_resource type="PackedScene" uid="uid://bj5gg1j8dw7u1" path="res://scenes/invert_colors_shader_overlay.tscn" id="5_x31ro"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kx65a"]
+viewport_path = NodePath("GUISubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ub2bi"]
+resource_local_to_scene = true
+transparency = 1
+cull_mode = 2
+specular_mode = 2
+albedo_texture = SubResource("ViewportTexture_kx65a")
 
 [sub_resource type="QuadMesh" id="QuadMesh_gm7d7"]
 size = Vector2(3.5, 2)
@@ -13,7 +24,7 @@ process_mode = 3
 script = ExtResource("1_kx65a")
 
 [node name="GUI" type="MeshInstance3D" parent="." unique_id=2076394283]
-material_override = ExtResource("2_flk2s")
+material_override = SubResource("StandardMaterial3D_ub2bi")
 mesh = SubResource("QuadMesh_gm7d7")
 
 [node name="GUISubViewport" type="SubViewport" parent="." unique_id=682400293]
@@ -23,6 +34,27 @@ canvas_item_default_texture_filter = 0
 size = Vector2i(1152, 648)
 
 [node name="MainMenu2DInterface" parent="GUISubViewport" unique_id=1759126058 instance=ExtResource("3_gm7d7")]
+
+[node name="Him" type="Control" parent="GUISubViewport" unique_id=378661926]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 500.0
+grow_vertical = 2
+
+[node name="HimTextureRect" type="TextureRect" parent="GUISubViewport/Him" unique_id=1014931734]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_x31ro")
+expand_mode = 1
+
+[node name="InvertColorsShaderOverlay" parent="GUISubViewport/Him" unique_id=1008456366 instance=ExtResource("5_x31ro")]
+layout_mode = 1
 
 [node name="SongAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1869172282]
 stream = ExtResource("4_peecx")

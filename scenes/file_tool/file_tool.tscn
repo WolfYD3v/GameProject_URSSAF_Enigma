@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dwtxilurp5xgk"]
+
+[ext_resource type="Script" uid="uid://di12dsx0p0qo7" path="res://scenes/file_tool/file_tool.gd" id="1_26iks"]
+
+[node name="FileTool" type="Node" unique_id=1806613440]
+script = ExtResource("1_26iks")
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=2047647179]
+oversampling_override = 1.0
+size = Vector2i(690, 360)
+dialog_hide_on_ok = true
+access = 2
+show_hidden_files = true
+option_count = 1

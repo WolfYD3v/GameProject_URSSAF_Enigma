@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://tnhv4pnyqyuh"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_8gi1k"]
+[ext_resource type="Texture2D" uid="uid://bysa0eb23tcjf" path="res://icon.svg" id="2_xfk8t"]
+
+[node name="QuestBookEncourgment1Page" unique_id=1413710666 instance=ExtResource("1_8gi1k")]
+
+[node name="TitleRichTextLabel" parent="Left/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Here is a little encouragment from the Direction, for you ![/u][/b]"
+
+[node name="SeparationArea2" type="ColorRect" parent="Left/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1957149949]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Left/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=139786287]
+layout_mode = 2
+texture = ExtResource("2_xfk8t")
+stretch_mode = 3
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=1969636282]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b][u]And your first gift from your handbook:[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=1212675457]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Work in a silent room is not very engaging, and heard someone yawing all the time is anoying .
+So I, your Holy Handbook, decided to give you a radio !"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=803660344]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=308954547]
+layout_mode = 2
+texture = ExtResource("2_xfk8t")
+stretch_mode = 3
+
+[node name="SeparationArea3" type="ColorRect" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="6" unique_id=1979048332]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Label2" type="Label" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="7" unique_id=1220946216]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "It can play some songs related to your workspace to keep you focus on your work ! I really want to make you feel like a proud URSSAF employee, with the related mindset .
+Thank me later by fiding this secret code !"
+horizontal_alignment = 1
+autowrap_mode = 3

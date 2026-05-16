@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hh3mjkh2ee0g"
+path="res://.godot/imported/Les Inconnus - Rap-tout (vampires).mp3-28d51d442a7a67b1725e719eb5abdcd8.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Les Inconnus - Rap-tout (vampires).mp3"
+dest_files=["res://.godot/imported/Les Inconnus - Rap-tout (vampires).mp3-28d51d442a7a67b1725e719eb5abdcd8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

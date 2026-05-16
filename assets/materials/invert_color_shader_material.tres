@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bbebgtbgavch3"]
+
+[ext_resource type="Shader" uid="uid://bkuawdlet8k3y" path="res://assets/shaders/invert_color_shader.tres" id="1_2qc1x"]
+
+[resource]
+shader = ExtResource("1_2qc1x")
+shader_parameter/brightness = 1.0
