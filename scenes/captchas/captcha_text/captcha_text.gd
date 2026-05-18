@@ -51,6 +51,7 @@ func _process(delta: float) -> void:
 func _on_check_answer_button_pressed_bis() -> void:
 	answer = answer_line_edit.text
 	answer_line_edit.editable = false
+	check_answer_button.disabled = true
 
 func _on_answer_line_edit_text_changed(new_text: String) -> void:
 	answer = new_text

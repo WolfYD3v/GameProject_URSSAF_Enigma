@@ -4,34 +4,31 @@
 
 [node name="QuestBookFilesExplanationPage" unique_id=1413710666 instance=ExtResource("1_xkb2v")]
 
-[node name="TitleRichTextLabel" parent="Left/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
 text = "[b][u]The Files: How Important are they ?[/u][/b]"
 
-[node name="Label1" type="Label" parent="Left/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=435658224]
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=435658224]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "At your job, you have two best friends: Your handbook (I think you know why), and the files .
+text = "At work, you have two best friends: not me, your manual (I think you know why), and the files.
 
-Unfortunatly, as the safe asked us very kindly, your handbook does not contains all the knowledge needed to get the secret code .
-In his head, he though the secret code was too easy to crack maybe (but if you think this is stupid/useless, I'm on your side) .
+Unfortunately, as the safe so kindly asked us, your manual doesn’t contain all the information needed to get the secret code.
+In its mind, it probably thought the secret code was too easy to crack (if you think that’s stupid or pointless, I completely disagree with you).
 
-How the files work ?
-It's easy, they are installed on your device in two ways:
-- The \"no consent respect Microslop like behavoir\", where the files are downloaded without your consent on your device, at a choosen location . And try to open your file explorer at the location of the downloaded file
-- The good behavoir, where the safe ask you if you want to download the file, and where you want . You will have to look for them, all by yourself to read the content . You are highly encouraged to download them, they can contain informations required to help you find the secret code"
-horizontal_alignment = 1
+How do these wonderful and very useful files work?
+It’s very simple; they install on your computer in two ways:
+- The “no consent respect Microslop like behavoir” where the files are downloaded to your device without your consent
+- The “exemplary good behavior,” where the system asks you if you want to download the file, and to which location.
+It is strongly encouraged to download them, as they may contain information necessary to help you find the secret code"
 autowrap_mode = 3
 
-[node name="Label1" type="Label" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=229044363]
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=229044363]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "I think you got all the informations you need, the following pages are more straigh forward and easy to understand than the one you've encoutered .
+text = "I think you have all the information you need; the following pages are clearer and easier to understand than the one you looked at.
 
-Good luck, and don't mess up .
+Good luck, and don't screw it up.
 
 
 - Diego"
-horizontal_alignment = 1
 autowrap_mode = 3

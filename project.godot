@@ -23,9 +23,11 @@ SecretCodeManager="*uid://bmtaeag28twdn"
 Cryptographer="*uid://eadm0xp0fj0m"
 HexBinConvertor="*uid://ccm5e1dwyd73u"
 CaptchatsData="*uid://bp5bwba6ifwxo"
+DenuvoLikeShit="*uid://bxp26x1nns1ij"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

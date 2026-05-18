@@ -10,6 +10,7 @@ signal page_unlocked(page_idx: int)
 @onready var buttons: HBoxContainer = $GUI/Buttons
 
 @export var keep_pages_count: bool = true
+@export var unlock_all_pages: bool = false
 
 var player: Player = null
 var current_page_idx: int = 0
@@ -17,6 +18,8 @@ var max_pages_count: int = 0
 var max_page_idx_unlocked: int = 3
 
 func _ready() -> void:
+	if unlock_all_pages: max_page_idx_unlocked = pages.get_child_count() - 1
+	
 	control_indication.hide()
 	gui.hide()
 	

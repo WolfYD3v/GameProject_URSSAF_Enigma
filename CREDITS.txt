@@ -7,6 +7,13 @@ BY FabooGuy [ https://www.deviantart.com/fabooguy/gallery ]
 - Sky: [ https://i.pinimg.com/originals/08/da/14/08da146435275f5cb02521be378bb4a5.jpg ]
 - Image Text Captcha Images: AI Generated (Gemini)
 MODIFICATIONS: Base File Modified with Krita (Isolation of Images from Source File)
+Quest Book:
+	[ https://as2.ftcdn.net/v2/jpg/01/82/48/93/1000_F_182489368_YDxVkWcLuwI3Vrx7nJyGDcySXzQaAxYZ.jpg ] (EDITED)
+	[ https://wordpress.soscuisine.com/2015/11/volonte.jpg ]
+	[ https://cdn.pixabay.com/photo/2014/03/14/20/13/dog-287420_1280.jpg ]
+	[ https://2.bp.blogspot.com/_L7Mo2vA1xZU/TTncHZDS06I/AAAAAAAAAEg/3vMIE9YVeRk/s1600/gato_21.JPG ]
+	[ https://images.saymedia-content.com/.image/t_share/MTk5NjY3NTAwODk0NDYzNjE2/bob-ross.jpg ]
+
 
 Videos:
 - Diego Explosion: [ https://pixabay.com/videos/explosion-green-screen-fire-bomb-240090/ ]
@@ -56,4 +63,6 @@ BY Memeboiii [ https://www.myinstants.com/en/profile/MemeBoiii/uploaded/ ]
 
 Fonts:
 - "Bricolage Grotesque" [ https://fonts.google.com/specimen/Bricolage+Grotesque?preview.script=Latn ]
+FROM Google Fonts [ https://fonts.google.com/ ]
+- "Lora" [ https://fonts.google.com/specimen/Lora ]
 FROM Google Fonts [ https://fonts.google.com/ ]

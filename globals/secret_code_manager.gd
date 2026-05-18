@@ -35,7 +35,7 @@ func generate() -> void:
 	_raw_secret_code += await _set_counting_part()
 	
 	# Adding the value the morse text (TODO Morse Minigame On Quest Book)
-	_raw_secret_code += "unrandomsection"
+	_raw_secret_code += "UNRANDOMSECTION"
 	
 	# Adding the Captcha answer
 	print("Setting the Captcha...")
@@ -92,6 +92,8 @@ func _number_pet_name() -> String:
 	return numbered_output
 
 func _set_counting_part() -> String:
+	if OS.get_name() == "Web": return "WordL".reverse()
+	
 	var output: String = ""
 	# https://lorem-api.com/api/lorem?paragraphs=20
 	
@@ -106,7 +108,7 @@ func _set_counting_part() -> String:
 	var data: Variant = await http_requester.request(url)
 	counting_part_text = data
 	get_tree().root.remove_child(http_requester)
-	if counting_part_text == "": return "NULL_LOREM_IPSUM"
+	if counting_part_text == "": return "NLI"
 	var words_count: int = 0
 	var current_word: String = ""
 	for data_character: String in counting_part_text:
@@ -115,12 +117,16 @@ func _set_counting_part() -> String:
 			current_word = ""
 			continue
 		current_word += data_character
-	output = str(words_count)
+	output = str(words_count * 20)
+	#output.remove_chars()
+	if output.length() < 3: pass
 	
 	counting_part_var = output
 	return output
 
 func _get_wordle_dayly_word() -> String:
+	if OS.get_name() == "Web": return "WordL".reverse()
+	
 	# Add the http_requester
 	var http_requester: HttpRequester = _create_http_requester()
 	await get_tree().create_timer(0.1).timeout

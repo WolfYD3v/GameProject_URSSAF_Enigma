@@ -1,7 +1,7 @@
 extends HBoxContainer
 class_name QuestBookPage
 
-@onready var pages_count_rich_text_label: RichTextLabel = $Right/Nodes/PagesCountRichTextLabel
+@onready var pages_count_rich_text_label: RichTextLabel = $Right/MarginContainer/Nodes/PagesCountRichTextLabel
 
 @export_range(1, 2, 1, "or_greater") var page_nb: int = 1
 @export_range(1, 2, 1, "or_greater") var max_pages_count: int = 1

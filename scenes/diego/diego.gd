@@ -55,18 +55,13 @@ func explode() -> void:
 	await explosion_video_stream_player.finished
 	explosion_video_stream_player.hide()
 	await get_tree().create_timer(1.0).timeout
-	await _try_download_my_file()
+	await _download_my_file()
+	await get_tree().create_timer(0.5).timeout
 	queue_free()
 
-func _try_download_my_file() -> void:
+func _download_my_file() -> void:
+	var file_content: String = "%d" % SecretCodeManager.diego_rdm_number
 	if Cryptographer._seleted_cryptography_methods.has("cesar"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		_save_my_file()
-		await file_tool.confirmed
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		
-		if file_tool.canceled: _try_download_my_file()
-
-func _save_my_file() -> void:
-	var file_content: String = "%d\ncesar" % SecretCodeManager.diego_rdm_number
-	file_tool.download_file("diego.txt", file_content)
+		file_content += "\ncesar"
+	file_tool.download_file("diego.txt", file_content, true)
+	await file_tool.confirmed

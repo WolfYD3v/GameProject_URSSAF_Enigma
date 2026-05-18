@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b5brm4hjvanvt"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_2vtjt"]
+[ext_resource type="Script" uid="uid://68p5iemtmohe" path="res://scenes/quest_book/pages/quest_book_part_c_page.gd" id="2_4i8wc"]
+[ext_resource type="PackedScene" uid="uid://ceqjnflawj4l5" path="res://scenes/captchas/captcha_spawner.tscn" id="3_gej07"]
+
+[node name="QuestBookPartCPage" unique_id=1413710666 instance=ExtResource("1_2vtjt")]
+script = ExtResource("2_4i8wc")
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Finding the unencrypted secret code: Section 5:[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1266411889]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Okay, okay, we're making progress.
+Now you're going to have to convert that text into something more readable for humans.
+I have no idea what this means: “··− −· ·−· ·− −· −·· −−− −− ··· · −·−· − ·· −−− −·”. But it’s probably related to this: “https://www.lexilogos.com/clavier/morse.htm”.
+
+It’s suddenly very easy—it’s hiding something, if you ask me."
+autowrap_mode = 3
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=951052872]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Finding the unencrypted secret code: Section 6:[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=437010655]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "The vault is like Cloudflare when you try to visit Itch.io—it needs to verify that you're not a robot.
+So it's generated a CAPTCHA just for you, to make sure you're human. Please click the button below to complete this routine test."
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=231599848]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="VerifyHumanityButton" type="Button" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=1681423128]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Verify Humanity"
+
+[node name="CaptchaSpawner" parent="." index="3" unique_id=1540591369 instance=ExtResource("3_gej07")]
+
+[connection signal="pressed" from="Right/MarginContainer/Nodes/VerifyHumanityButton" to="." method="_on_verify_humanity_button_pressed"]

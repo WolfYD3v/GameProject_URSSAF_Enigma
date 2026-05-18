@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dhj8q5ijavnhv"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_21aym"]
+[ext_resource type="Script" uid="uid://bw2ylfrh4vd4r" path="res://scenes/quest_book/pages/quest_book_part_a_page.gd" id="2_crev6"]
+[ext_resource type="Texture2D" uid="uid://c7mllartxsbsn" path="res://assets/textures/wolfyd3v_pp_texture.png" id="3_vuk3q"]
+
+[node name="QuestBookPartAPage" unique_id=1413710666 instance=ExtResource("1_21aym")]
+script = ExtResource("2_crev6")
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Finding the unencrypted secret code: Section 1:[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=338319882]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Before Diego went to the break room (the explosion didn't kill him), he decided to leave you a welcome gift.
+A text file was force-downloaded. You must have seen something happen, which means the operation was successful.
+
+The number on the first line of the file is the first character of the unencrypted secret code."
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=955343113]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TitleRichTextLabel2" type="RichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="4" unique_id=1926239535]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Finding the unencrypted secret code: Section 2:[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="5" unique_id=612896749]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "There is a picture of a pet on the right side of the page.
+The name of this pet is the next part of the secret code.
+
+There is a specific formatting rule to follow to get the name right:
+- not “horse,” but \"Horse\"
+- not “elephant,” but “Elephant”
+- not “him,” but “Him”
+I think you see the logic behind this.
+
+If the photo of the pet appears reversed, its name must be as well. In that case, the formatting looks more like “nositbE”, \"daB\", or \"dlihC\" ."
+autowrap_mode = 3
+
+[node name="SeparationArea" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="1" unique_id=1345146051]
+visible = false
+
+[node name="PetTextureRect" type="TextureRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=414105877]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_vuk3q")
+expand_mode = 1
+stretch_mode = 5

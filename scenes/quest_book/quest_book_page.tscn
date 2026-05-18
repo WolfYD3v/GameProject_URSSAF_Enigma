@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://d34jc4hyher2e"]
 
-[ext_resource type="Theme" uid="uid://csp8roogyp1f5" path="res://assets/themes/main_theme.tres" id="1_73tm7"]
 [ext_resource type="Script" uid="uid://dnc6bufmjqx4u" path="res://scenes/quest_book/quest_book_page.gd" id="1_126cm"]
+[ext_resource type="Theme" uid="uid://dlr20ytminx68" path="res://assets/themes/quest_book_theme.tres" id="1_dtlty"]
+[ext_resource type="Texture2D" uid="uid://crrwn1r1jufso" path="res://assets/textures/quest_book_encouragments/quest_book_gb.jpg" id="3_dtlty"]
+
+[sub_resource type="Gradient" id="Gradient_dtlty"]
+offsets = PackedFloat32Array(0, 0.45, 0.55, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.11858138, 0.11858139, 0.11858133, 1, 0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w2jam"]
+gradient = SubResource("Gradient_dtlty")
+width = 25
+height = 1
 
 [node name="QuestBookPage" type="HBoxContainer" unique_id=1413710666]
 anchors_preset = 15
@@ -9,74 +19,90 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_73tm7")
+theme = ExtResource("1_dtlty")
 theme_override_constants/separation = 0
 script = ExtResource("1_126cm")
 
 [node name="Left" type="Control" parent="." unique_id=972787118]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
-[node name="Background" type="ColorRect" parent="Left" unique_id=1105407514]
+[node name="Background" type="TextureRect" parent="Left" unique_id=773252204]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.7058824)
+texture = ExtResource("3_dtlty")
+expand_mode = 1
 
-[node name="Nodes" type="VBoxContainer" parent="Left" unique_id=1644936578]
+[node name="MarginContainer" type="MarginContainer" parent="Left" unique_id=1823875711]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="Nodes" type="VBoxContainer" parent="Left/MarginContainer" unique_id=1644936578]
+layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="SeparationArea" type="ColorRect" parent="Left/Nodes" unique_id=2127352528]
+[node name="SeparationArea" type="ColorRect" parent="Left/MarginContainer/Nodes" unique_id=2127352528]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 color = Color(1, 1, 1, 0)
 
-[node name="TitleRichTextLabel" type="RichTextLabel" parent="Left/Nodes" unique_id=1098942946]
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Left/MarginContainer/Nodes" unique_id=1098942946]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 25
-theme_override_font_sizes/bold_font_size = 25
 bbcode_enabled = true
 text = "[b][u]TITLE[/u][/b]"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="SeparationLine" type="ColorRect" parent="." unique_id=490408220]
-custom_minimum_size = Vector2(5, 0)
+[node name="SeparationArea" type="TextureRect" parent="." unique_id=95442566]
 layout_mode = 2
-color = Color(0, 0, 0, 1)
+texture = SubResource("GradientTexture2D_w2jam")
 
 [node name="Right" type="Control" parent="." unique_id=1303267691]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
-[node name="Background" type="ColorRect" parent="Right" unique_id=134951278]
+[node name="Background" type="TextureRect" parent="Right" unique_id=305864290]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.7058824)
+texture = ExtResource("3_dtlty")
+expand_mode = 1
+flip_h = true
 
-[node name="Nodes" type="VBoxContainer" parent="Right" unique_id=1257509253]
+[node name="MarginContainer" type="MarginContainer" parent="Right" unique_id=853708748]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="Nodes" type="VBoxContainer" parent="Right/MarginContainer" unique_id=1257509253]
+layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="PagesCountRichTextLabel" type="RichTextLabel" parent="Right/Nodes" unique_id=1838195359]
+[node name="PagesCountRichTextLabel" type="RichTextLabel" parent="Right/MarginContainer/Nodes" unique_id=1838195359]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
@@ -84,7 +110,7 @@ text = "[u]Page {nb} / {nb}[/u]"
 fit_content = true
 horizontal_alignment = 2
 
-[node name="SeparationArea" type="ColorRect" parent="Right/Nodes" unique_id=1345146051]
+[node name="SeparationArea" type="ColorRect" parent="Right/MarginContainer/Nodes" unique_id=1345146051]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 color = Color(1, 1, 1, 0)

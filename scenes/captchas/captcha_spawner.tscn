@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ceqjnflawj4l5"]
+
+[ext_resource type="Script" uid="uid://ca4hh1ipu45vu" path="res://scenes/captchas/captcha_spawner.gd" id="1_6ddxe"]
+
+[node name="CaptchaSpawner" type="Node" unique_id=1540591369]
+script = ExtResource("1_6ddxe")

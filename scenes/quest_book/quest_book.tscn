@@ -12,7 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://csonay1sqjtdm" path="res://scenes/quest_book/pages/quest_book_secret_code_page.tscn" id="9_2p7a2"]
 [ext_resource type="PackedScene" uid="uid://dkjh688ofe3lq" path="res://scenes/quest_book/pages/quest_book_files_explanation_page.tscn" id="10_885t4"]
 [ext_resource type="PackedScene" uid="uid://tnhv4pnyqyuh" path="res://scenes/quest_book/pages/quest_book_encourgment_1_page.tscn" id="11_lf2kv"]
-[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="12_lf2kv"]
+[ext_resource type="PackedScene" uid="uid://dhj8q5ijavnhv" path="res://scenes/quest_book/pages/quest_book_part_a_page.tscn" id="13_bvli4"]
+[ext_resource type="PackedScene" uid="uid://ck1egf2tdtyh8" path="res://scenes/quest_book/pages/quest_book_part_b_page.tscn" id="14_44s0a"]
+[ext_resource type="PackedScene" uid="uid://b5brm4hjvanvt" path="res://scenes/quest_book/pages/quest_book_part_c_page.tscn" id="15_frbyq"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_7rh4n"]
 left_to_right = 1.0
@@ -199,7 +201,13 @@ layout_mode = 1
 [node name="QuestBookEncourgment1Page" parent="GUI/Pages" unique_id=1829762365 instance=ExtResource("11_lf2kv")]
 layout_mode = 1
 
-[node name="QuestBookPage" parent="GUI/Pages" unique_id=1271388594 instance=ExtResource("12_lf2kv")]
+[node name="QuestBookPartAPage" parent="GUI/Pages" unique_id=2078528086 instance=ExtResource("13_bvli4")]
+layout_mode = 1
+
+[node name="QuestBookPartBPage" parent="GUI/Pages" unique_id=359894676 instance=ExtResource("14_44s0a")]
+layout_mode = 1
+
+[node name="QuestBookPartCPage" parent="GUI/Pages" unique_id=1703335738 instance=ExtResource("15_frbyq")]
 layout_mode = 1
 
 [node name="Buttons" type="HBoxContainer" parent="GUI" unique_id=612413034]

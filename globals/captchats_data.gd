@@ -7,9 +7,9 @@ enum CAPTCHAT_TYPES {
 }
 var captchat_type: CAPTCHAT_TYPES = CAPTCHAT_TYPES.SQUARE
 var captchats: Dictionary[CAPTCHAT_TYPES, String] = {
-	CAPTCHAT_TYPES.SQUARE: "",
-	CAPTCHAT_TYPES.IMAGE_TEXT: "",
-	CAPTCHAT_TYPES.DOTS: ""
+	CAPTCHAT_TYPES.SQUARE: "res://scenes/captchas/captcha_text/captcha_text.tscn",
+	CAPTCHAT_TYPES.IMAGE_TEXT: "res://scenes/captchas/captcha_text/captcha_text.tscn",
+	CAPTCHAT_TYPES.DOTS: "res://scenes/captchas/captcha_text/captcha_text.tscn"
 }
 var right_answer: String = ""
 

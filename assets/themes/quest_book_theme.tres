@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://dlr20ytminx68"]
+
+[ext_resource type="FontFile" uid="uid://cvqvx11bkgc5l" path="res://assets/fonts/Lora/static/Lora-Bold.ttf" id="1_drqij"]
+[ext_resource type="FontFile" uid="uid://y43v541j18yb" path="res://assets/fonts/Lora/static/Lora-Regular.ttf" id="2_fi02l"]
+
+[resource]
+default_font = ExtResource("2_fi02l")
+default_font_size = 15
+Label/colors/font_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/bold_font_size = 23
+RichTextLabel/font_sizes/normal_font_size = 23
+RichTextLabel/fonts/bold_font = ExtResource("1_drqij")

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ck1egf2tdtyh8"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_k8bt7"]
+[ext_resource type="Script" uid="uid://vfisqp6fsx8r" path="res://scenes/quest_book/pages/quest_book_part_b_page.gd" id="2_5rbf6"]
+[ext_resource type="Texture2D" uid="uid://oy1elqworaxi" path="res://assets/textures/quest_book_encouragments/quest_book_bob_ross.jpg" id="2_s64yd"]
+[ext_resource type="PackedScene" uid="uid://dwtxilurp5xgk" path="res://scenes/file_tool/file_tool.tscn" id="4_3qti8"]
+
+[node name="QuestBookPartBPage" unique_id=1413710666 instance=ExtResource("1_k8bt7")]
+script = ExtResource("2_5rbf6")
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Finding the unencrypted secret code: Section 3:[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=277343257]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "The continuation of the unencrypted secret code is based on the pet's name.
+You need to convert the text into numbers. The only clue the safe allows me to give is this:
+“BobRoss” -> “215218151919”
+
+It's up to you to figure out the logic behind it."
+autowrap_mode = 3
+
+[node name="BobRossTextureRect" type="TextureRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=684495418]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_s64yd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=1194485798]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Finding the unencrypted secret code: Section 4:[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=1903971416]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "A file will be available for download.
+It contains some text; you need to count the number of words.
+Multiply that number by X, then use only the first Y digits of the result.
+
+Where X and Y are numbers you need to find. Where?
+The safe doesn’t want anyone to know.
+But I can give you a hint! The number X is written in red. And the number Y is also written in red, but in the form of a fairly easy math problem. And I know the problem isn’t random ;)"
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=73590874]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="DownloadFileButton" type="Button" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=1332797994]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Download File"
+
+[node name="FileTool" parent="." index="3" unique_id=1806613440 instance=ExtResource("4_3qti8")]
+
+[connection signal="pressed" from="Right/MarginContainer/Nodes/DownloadFileButton" to="." method="_on_download_file_button_pressed"]

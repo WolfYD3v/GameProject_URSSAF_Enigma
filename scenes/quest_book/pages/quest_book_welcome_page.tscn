@@ -1,65 +1,41 @@
 [gd_scene format=3 uid="uid://bcdflky62iefu"]
 
 [ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_0cxxa"]
-[ext_resource type="Texture2D" uid="uid://bysa0eb23tcjf" path="res://icon.svg" id="2_bxmd5"]
 
 [node name="QuestBookWelcomePage" unique_id=1413710666 instance=ExtResource("1_0cxxa")]
 
-[node name="TitleRichTextLabel" parent="Left/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
-text = "[b][u]URSSAF Safe Code: The Basics[/u][/b]"
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]The URSSAF Safe's Secret Code: The Basics[/u][/b]"
 
-[node name="Label1" type="Label" parent="Left/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=546952349]
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=546952349]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "Hello there, {person responsable's name of opening the safe} .
-This book is like your sorta of a employee handbook, but without all the stupid rules maybe writen by a HR old grumpy lady . Yes .
+text = "Hello, {name of the jerk in charge of this job created to reduce unemployment in France}.
+Since I don’t really want to help you out, this book will take care of that burden. It’s sort of your employee handbook, but without all those stupid rules that could have been written by a grumpy old lady in HR.
 
-So, the safe is locked (to protect safely the tasty money stored inside) . To be sure about the solidity of the security, a secret code of 100 characters have to be inputed .
-To learn more about the secret code, just go to the next page .
+To put things in context, since 2018, the French government has decided to “punish us for our bad behavior” by freezing OUR money sitting in the safe across the hall. As if we were really that greedy!
+The URSSAF then hired me to try to get OUR money back.
+And now, it’s up to you to unlock the safe (they didn’t do anything to stop you… the government is as efficient as ever). You just need to find a secret code [see the next page to learn more about the secret code]. It shouldn’t be too hard for an idiot like you.
+Either you succeed, or you die. It’s as simple as that.
 
-As the official person that own this \"handbook\", it's YOUR role to keep it ONLY for you as MUCH as POSSIBLE .
-The Direction don't want to see the Key of our security leeks out (and you don't want too) . It's OUR money !!!!!
-
-[revision]
-Since 2018, the French gouvernment has decided to \"punish us for our bad behavoir\", by freezing the money inside the safe . As if we are greddy !
-So we hired Diego, to try to get back OUR money .
-And now it's your role to find the secret code, to unlock the safe (they didn't do anything to stop that...)
-You succed, or you die . Simple ennought ."
-horizontal_alignment = 1
+As the official holder of this “manual,” it’s up to YOU to keep it. ONLY for yourself as much as POSSIBLE.
+Management doesn’t want the key to our security to be revealed (and neither do you). It’s OUR money, damn it!!!!!"
 autowrap_mode = 3
 
-[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=288541257]
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=288541257]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 25
-theme_override_font_sizes/bold_font_size = 25
 bbcode_enabled = true
 text = "[b][u]This book have strange powers[/u][/b]"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="Label1" type="Label" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=152059399]
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=152059399]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "Some retiries told the Direction about strange things hapening around them, like things spawning/disapearing in the room, or the book giving access to more and more pages .
-Why ?
-Because, I guess (I, as the writer of the handbook) .
+text = "Some retirees (some of whom are better people than you) have reported to Management that strange things have been happening around them, like objects appearing or disappearing in the room, or the book unlocking more and more pages.
+That’s totally normal! Even though I can’t explain why (as the author of the manual), it’s very normal.
+It even rewards you for unlocking pages with incredible rewards! Isn’t that awesome? :)
 
-And sometimes, it rewards you for unlocking pages with amazing rewards !
-How nice it is :)
-
-As a good employe, you have to embrace his Holy grace .
-Maybe it will help you in your mission, who know ?"
-horizontal_alignment = 1
+As a good employee, you must accept its Holy Grace.
+Maybe it will help you on your mission—who knows?"
 autowrap_mode = 3
-
-[node name="SeparationArea2" type="ColorRect" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=1507882798]
-custom_minimum_size = Vector2(0, 15)
-layout_mode = 2
-color = Color(1, 1, 1, 0)
-
-[node name="TextureRect" type="TextureRect" parent="Right/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=692206404]
-layout_mode = 2
-texture = ExtResource("2_bxmd5")
-stretch_mode = 3
