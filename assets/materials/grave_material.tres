@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cko6vv6h8jttl"]
+
+[ext_resource type="Texture2D" uid="uid://bijrbvd84632e" path="res://assets/textures/marbre_noise_texture.tres" id="1_ex4ad"]
+[ext_resource type="Texture2D" uid="uid://bi4cxyoybr4rg" path="res://assets/textures/ground_texture.jpg" id="2_r1xw0"]
+
+[resource]
+albedo_color = Color(0.54896253, 0.5489626, 0.5489625, 1)
+albedo_texture = ExtResource("1_ex4ad")
+metallic_specular = 1.0
+metallic_texture = ExtResource("2_r1xw0")
+roughness = 0.5

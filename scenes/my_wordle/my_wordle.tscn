@@ -1,0 +1,252 @@
+[gd_scene format=3 uid="uid://me8h7h8l5biw"]
+
+[ext_resource type="Script" uid="uid://dj16oqmt44px0" path="res://scenes/my_wordle/my_wordle.gd" id="1_2vfoe"]
+[ext_resource type="PackedScene" uid="uid://b78ecrl1k0sse" path="res://scenes/my_wordle/my_wordle_case/my_wordle_case.tscn" id="2_cj68m"]
+[ext_resource type="AudioStream" uid="uid://cq2cvo52vy17u" path="res://assets/songs/captcha_minigame_ambiance.mp3" id="3_6u54e"]
+[ext_resource type="Environment" uid="uid://bekbo647gqq44" path="res://assets/envs/urssaf_building_env.tres" id="4_el1yn"]
+[ext_resource type="VideoStream" uid="uid://btj1qutiq7yg0" path="res://assets/videos/my_wordle_win_vid.ogv" id="6_jwkjd"]
+[ext_resource type="PackedScene" uid="uid://bmtm35lgi5jkr" path="res://assets/models/diego/diego_model.tscn" id="6_uml3o"]
+[ext_resource type="AudioStream" uid="uid://betm63xmvx2w" path="res://assets/sfxs/captcha_minigame_sfx.mp3" id="7_jwkjd"]
+[ext_resource type="AudioStream" uid="uid://d05jhuu3qg12e" path="res://assets/songs/my_wordle_ambiance.mp3" id="8_7brtm"]
+[ext_resource type="Texture2D" uid="uid://b1qv54sa5xgun" path="res://assets/textures/him.png" id="9_hvnys"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_coohw"]
+viewport_path = NodePath("DiegoSubViewport")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_41qgp"]
+
+[node name="MyWordle" type="Control" unique_id=447181512]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_2vfoe")
+
+[node name="Control" type="Control" parent="." unique_id=624942626]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -575.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Control" unique_id=2015032488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=938277208]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Nodes" type="VBoxContainer" parent="Control/MarginContainer" unique_id=168121411]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/Nodes" unique_id=686933661]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[u][b]Wordle V2:[/b][/u]"
+fit_content = true
+
+[node name="Label" type="Label" parent="Control/MarginContainer/Nodes" unique_id=1250862027]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "A random chain of 20 characters have been randomly generated.
+It's up to you to uncover this mistery, the answer is the next part of the secret code.
+It's recommanded to remember what you typed, and where you were right. Just sayin' ..."
+autowrap_mode = 3
+
+[node name="SeparationArea" type="ColorRect" parent="Control/MarginContainer/Nodes" unique_id=1070771681]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/Nodes" unique_id=216767260]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "Please type something..."
+autowrap_mode = 3
+
+[node name="Cases" type="HBoxContainer" parent="Control/MarginContainer/Nodes" unique_id=891829182]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="MyWordleCase1" parent="Control/MarginContainer/Nodes/Cases" unique_id=2004375184 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase2" parent="Control/MarginContainer/Nodes/Cases" unique_id=1150518301 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase3" parent="Control/MarginContainer/Nodes/Cases" unique_id=1609107181 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase4" parent="Control/MarginContainer/Nodes/Cases" unique_id=1566492704 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase5" parent="Control/MarginContainer/Nodes/Cases" unique_id=1372478458 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase6" parent="Control/MarginContainer/Nodes/Cases" unique_id=1030129766 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase7" parent="Control/MarginContainer/Nodes/Cases" unique_id=1300810354 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase8" parent="Control/MarginContainer/Nodes/Cases" unique_id=1607004593 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase9" parent="Control/MarginContainer/Nodes/Cases" unique_id=463911326 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase10" parent="Control/MarginContainer/Nodes/Cases" unique_id=1115620992 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase11" parent="Control/MarginContainer/Nodes/Cases" unique_id=1300386309 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase12" parent="Control/MarginContainer/Nodes/Cases" unique_id=2146970066 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase13" parent="Control/MarginContainer/Nodes/Cases" unique_id=78983662 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase14" parent="Control/MarginContainer/Nodes/Cases" unique_id=2007122967 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase15" parent="Control/MarginContainer/Nodes/Cases" unique_id=1777811553 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase16" parent="Control/MarginContainer/Nodes/Cases" unique_id=1826731093 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase17" parent="Control/MarginContainer/Nodes/Cases" unique_id=1786375576 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase18" parent="Control/MarginContainer/Nodes/Cases" unique_id=1878570703 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase19" parent="Control/MarginContainer/Nodes/Cases" unique_id=634735729 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MyWordleCase20" parent="Control/MarginContainer/Nodes/Cases" unique_id=986422482 instance=ExtResource("2_cj68m")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="WinVideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1943011825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("6_jwkjd")
+volume_db = -80.0
+expand = true
+
+[node name="DiegoTextureRect" type="TextureRect" parent="." unique_id=358785171]
+custom_minimum_size = Vector2(500, 648)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_coohw")
+expand_mode = 1
+
+[node name="AmbianceAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2146827687]
+stream = ExtResource("8_7brtm")
+autoplay = true
+parameters/looping = true
+
+[node name="WinAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2099606048]
+stream = ExtResource("3_6u54e")
+pitch_scale = 2.5
+
+[node name="AnswerAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=750323048]
+
+[node name="YayAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1903237969]
+
+[node name="DiegoSubViewport" type="SubViewport" parent="." unique_id=442113681]
+transparent_bg = true
+size = Vector2i(500, 500)
+
+[node name="Camera" type="Camera3D" parent="DiegoSubViewport" unique_id=1848232359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.4)
+environment = ExtResource("4_el1yn")
+
+[node name="Diego" type="StaticBody3D" parent="DiegoSubViewport" unique_id=707562888]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="DiegoModel" parent="DiegoSubViewport/Diego" unique_id=2102286300 instance=ExtResource("6_uml3o")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.90000004, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DiegoSubViewport/Diego" unique_id=344029043]
+shape = SubResource("CapsuleShape3D_41qgp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=919374187]
+process_mode = 3
+stream = ExtResource("7_jwkjd")
+volume_db = 24.0
+pitch_scale = 0.1
+parameters/looping = false
+
+[node name="Him" type="TextureRect" parent="." unique_id=1122141311]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -428.5
+offset_right = 325.0
+offset_bottom = 428.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_hvnys")

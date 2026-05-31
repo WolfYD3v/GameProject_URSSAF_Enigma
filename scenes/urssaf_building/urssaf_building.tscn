@@ -25,13 +25,12 @@
 [ext_resource type="AudioStream" uid="uid://bhti8f2ngnujq" path="res://assets/sfxs/pop_sfx.mp3" id="21_8y65o"]
 [ext_resource type="Material" uid="uid://d26f6w13md4eb" path="res://assets/materials/rail_metal_material.tres" id="22_cqnmi"]
 [ext_resource type="PackedScene" uid="uid://bm6cd8qpbumo8" path="res://scenes/quest_book/quest_book.tscn" id="23_4k0pu"]
+[ext_resource type="PackedScene" uid="uid://3b503qmgdnis" path="res://scenes/safe/safe.tscn" id="25_rmap3"]
 [ext_resource type="AudioStream" uid="uid://cnuemvy7a5uwd" path="res://assets/songs/area2_ambiance.mp3" id="25_u8sny"]
-[ext_resource type="PackedScene" uid="uid://bnym52edfa4e5" path="res://scenes/radio/radio.tscn" id="26_us7o8"]
-[ext_resource type="AudioStream" uid="uid://c5x0tgb52dwo4" path="res://assets/songs/Money Money Money Modifié.mp3" id="27_l1mv1"]
-[ext_resource type="AudioStream" uid="uid://hh3mjkh2ee0g" path="res://assets/songs/Les Inconnus - Rap-tout (vampires).mp3" id="28_erwgk"]
-[ext_resource type="AudioStream" uid="uid://dvm8nillivq6b" path="res://assets/songs/ABBA - Money, Money, Money (Official Music Video).mp3" id="29_u5e4e"]
-[ext_resource type="AudioStream" uid="uid://dyfvqrfoqbnok" path="res://assets/songs/Je possède des thunes (Clip Intégral) - David Castello-Lopes.mp3" id="30_xvohh"]
-[ext_resource type="PackedScene" uid="uid://cykcn8wm8ey81" path="res://scenes/schrodinger_cat/schrodinger_cat.tscn" id="31_l1mv1"]
+[ext_resource type="Texture2D" uid="uid://d078klpucghcr" path="res://assets/textures/discord_urssaf_banner.png" id="27_f0jpj"]
+[ext_resource type="Material" uid="uid://doviwov656seo" path="res://assets/materials/green_transparent_material.tres" id="28_5r0xy"]
+[ext_resource type="Script" uid="uid://bxeha81205lfs" path="res://scenes/graves_minigame/graves_minigame.gd" id="29_us7o8"]
+[ext_resource type="PackedScene" uid="uid://bfi6pblgug5nb" path="res://scenes/mathy_minigame/mathy_minigame.tscn" id="30_l1mv1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5mq0q"]
 size = Vector3(30, 0.2, 100)
@@ -296,9 +295,20 @@ _surfaces = [{
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_05qk2"]
 data = PackedVector3Array(-5.25, -0.14999999, -0.14999999, -5.25, 0.14899999, -0.14999999, -5.25, -0.14999999, 0.14999999, -5.25, -0.14999999, -0.14999999, -5.25, -0.14999999, 0.14999999, 5.25, -0.14999999, -0.14999999, -5.25, -0.14999999, 0.14999999, -5.25, 0.14899999, 0.14999999, 5.25, -0.14999999, 0.14999999, -5.25, -0.14999999, 0.14999999, -5.25, 0.14899999, -0.14999999, -5.25, 0.14999999, -0.14999999, -5.25, -0.14999999, -0.14999999, 5.25, 0.14899999, -0.14999999, -5.25, 0.14899999, -0.14999999, -5.25, -0.14999999, 0.14999999, -5.25, 0.14999999, -0.14999999, -5.25, 0.14899999, 0.14999999, -5.25, 0.14899999, 0.14999999, -5.25, 0.14999999, -0.14999999, -5.25, 0.14999999, 0.14999999, -5.25, -0.14999999, -0.14999999, 5.25, -0.14999999, -0.14999999, 5.25, 0.14899999, -0.14999999, -5.25, -0.14999999, 0.14999999, 5.25, -0.14999999, 0.14999999, 5.25, -0.14999999, -0.14999999, 5.25, -0.14999999, -0.14999999, 5.25, -0.14999999, 0.14999999, 5.25, 0.14899999, 0.14999999, 5.25, -0.14999999, -0.14999999, 5.25, 0.14999999, 0.14999999, 5.25, 0.14899999, -0.14999999, 5.25, 0.14899999, -0.14999999, 5.25, 0.14999999, 0.14999999, 5.25, 0.14999999, -0.14999999, 5.25, -0.14999999, 0.14999999, -5.25, 0.14899999, 0.14999999, 5.25, 0.14899999, 0.14999999, 5.25, -0.14999999, -0.14999999, 5.25, 0.14899999, 0.14999999, 5.25, 0.14999999, 0.14999999, -5.25, 0.14899999, -0.25, -5.25, 0.299, -0.25, -5.25, 0.14999999, -0.14999999, -5.25, 0.14899999, -0.25, -5.25, 0.14999999, -0.14999999, -5.25, 0.14899999, -0.14999999, -5.25, 0.299, -0.25, -5.25, 0.14999999, 0.14999999, -5.25, 0.14999999, -0.14999999, -5.25, 0.14899999, -0.25, 5.25, 0.14899999, -0.25, -5.25, 0.299, -0.25, -5.25, 0.14899999, -0.25, -5.25, 0.14899999, -0.14999999, 5.25, 0.14899999, -0.14999999, -5.25, 0.14899999, 0.25, -5.25, 0.14999999, 0.14999999, -5.25, 0.299, -0.25, -5.25, 0.14899999, 0.25, -5.25, 0.299, -0.25, -5.25, 0.299, 0.25, -5.25, 0.14899999, 0.25, -5.25, 0.14899999, 0.14999999, -5.25, 0.14999999, 0.14999999, -5.25, 0.299, -0.25, 5.25, 0.299, 0.25, -5.25, 0.299, 0.25, -5.25, 0.14899999, 0.25, 5.25, 0.14899999, 0.25, -5.25, 0.14899999, 0.14999999, -5.25, 0.14899999, 0.25, -5.25, 0.299, 0.25, 5.25, 0.299, 0.25, -5.25, 0.14899999, -0.25, 5.25, 0.14899999, -0.14999999, 5.25, 0.14899999, -0.25, -5.25, 0.299, -0.25, 5.25, 0.14899999, -0.25, 5.25, 0.299, -0.25, -5.25, 0.299, -0.25, 5.25, 0.299, -0.25, 5.25, 0.299, 0.25, 5.25, 0.14899999, -0.25, 5.25, 0.14899999, -0.14999999, 5.25, 0.14999999, -0.14999999, 5.25, 0.14899999, -0.25, 5.25, 0.14999999, -0.14999999, 5.25, 0.299, 0.25, 5.25, 0.14899999, -0.25, 5.25, 0.299, 0.25, 5.25, 0.299, -0.25, 5.25, 0.14899999, 0.25, 5.25, 0.14899999, 0.14999999, -5.25, 0.14899999, 0.14999999, -5.25, 0.14899999, 0.25, 5.25, 0.299, 0.25, 5.25, 0.14899999, 0.25, 5.25, 0.299, 0.25, 5.25, 0.14999999, -0.14999999, 5.25, 0.14999999, 0.14999999, 5.25, 0.14899999, 0.25, 5.25, 0.14999999, 0.14999999, 5.25, 0.14899999, 0.14999999, 5.25, 0.14899999, 0.25, 5.25, 0.299, 0.25, 5.25, 0.14999999, 0.14999999, -5.25, -0.3292, -0.25, -5.25, -0.1792, -0.25, -5.25, -0.3292, 0.25, -5.25, -0.3292, -0.25, 5.25, -0.3292, -0.25, -5.25, -0.1792, -0.25, -5.25, -0.3292, -0.25, -5.25, -0.3292, 0.25, 5.25, -0.3292, -0.25, -5.25, -0.1792, -0.25, -5.25, -0.1792, 0.25, -5.25, -0.3292, 0.25, -5.25, -0.1792, -0.25, 5.25, -0.1792, 0.25, -5.25, -0.1792, 0.25, -5.25, -0.3292, 0.25, -5.25, -0.1792, 0.25, 5.25, -0.1792, 0.25, -5.25, -0.1792, -0.25, 5.25, -0.3292, -0.25, 5.25, -0.1792, -0.25, -5.25, -0.1792, -0.25, 5.25, -0.1792, -0.25, 5.25, -0.1792, 0.25, 5.25, -0.3292, -0.25, 5.25, -0.1792, 0.25, 5.25, -0.1792, -0.25, -5.25, -0.3292, 0.25, 5.25, -0.3292, 0.25, 5.25, -0.3292, -0.25, -5.25, -0.3292, 0.25, 5.25, -0.1792, 0.25, 5.25, -0.3292, 0.25, 5.25, -0.3292, -0.25, 5.25, -0.3292, 0.25, 5.25, -0.1792, 0.25)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5r0xy"]
+cull_mode = 2
+albedo_texture = ExtResource("27_f0jpj")
+
+[sub_resource type="QuadMesh" id="QuadMesh_f0jpj"]
+size = Vector2(10, 2.5)
+
+[sub_resource type="TextMesh" id="TextMesh_f0jpj"]
+text = "Pas besoin de créditer ça"
+font_size = 50
+autowrap_mode = 3
+
 [node name="UrssafBuilding" type="Node3D" unique_id=1297059348]
 script = ExtResource("1_xtc4c")
-skip_begin = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1907680128]
 environment = ExtResource("1_5k72t")
@@ -987,6 +997,9 @@ shape = SubResource("ConcavePolygonShape3D_05qk2")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0.59999996, 0)
 unlock_all_pages = true
 
+[node name="Safe" parent="MapAreas/Area2" unique_id=1715590814 instance=ExtResource("25_rmap3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.882759, 2.3417351, -4.5942907)
+
 [node name="AmbianceAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="MapAreas/Area2" unique_id=1198189985]
 transform = Transform3D(1.9106855e-15, 1, 4.371139e-08, 4.371139e-08, -4.371139e-08, 1, 1, 0, -4.371139e-08, 0, 6, 0)
 stream = ExtResource("25_u8sny")
@@ -996,17 +1009,70 @@ max_db = 6.0
 emission_angle_enabled = true
 parameters/looping = true
 
-[node name="Radio" parent="MapAreas/Area2" unique_id=1403301068 instance=ExtResource("26_us7o8")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.4000015, 0.6894788, -2)
-songs = Array[AudioStream]([ExtResource("27_l1mv1"), ExtResource("28_erwgk"), ExtResource("29_u5e4e"), ExtResource("30_xvohh")])
-play_mode = 1
+[node name="DiscordURSSAFBanner" type="MeshInstance3D" parent="MapAreas/Area2" unique_id=2103408894]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.300001, 3.2000003, 9)
+material_override = SubResource("StandardMaterial3D_5r0xy")
+mesh = SubResource("QuadMesh_f0jpj")
 
-[node name="SchrodingerCat" parent="MapAreas/Area2" unique_id=2137850241 instance=ExtResource("31_l1mv1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.6, -6)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MapAreas/Area2" unique_id=1862299041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3.2, 9.1)
+material_override = ExtResource("28_5r0xy")
+mesh = SubResource("TextMesh_f0jpj")
+
+[node name="GravesMinigame" type="Node3D" parent="MapAreas/Area2" unique_id=1498246765]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20000005, 0)
+script = ExtResource("29_us7o8")
+
+[node name="MarkersNode" type="Node3D" parent="MapAreas/Area2/GravesMinigame" unique_id=1205455067]
+
+[node name="Marker3D1" type="Marker3D" parent="MapAreas/Area2/GravesMinigame/MarkersNode" unique_id=1153524222]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.700001, 0, -11.6)
+
+[node name="Marker3D2" type="Marker3D" parent="MapAreas/Area2/GravesMinigame/MarkersNode" unique_id=1792299247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.700001, 0, -12.1)
+
+[node name="Marker3D3" type="Marker3D" parent="MapAreas/Area2/GravesMinigame/MarkersNode" unique_id=1063260498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12.099999)
+
+[node name="Marker3D4" type="Marker3D" parent="MapAreas/Area2/GravesMinigame/MarkersNode" unique_id=1618917035]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.6, 0, 0.1)
+
+[node name="Marker3D5" type="Marker3D" parent="MapAreas/Area2/GravesMinigame/MarkersNode" unique_id=1036767819]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.400002, 0, 0.10000004)
+
+[node name="Marker3D6" type="Marker3D" parent="MapAreas/Area2/GravesMinigame/MarkersNode" unique_id=1647078552]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -11.900002, 4.6000004, 11)
+
+[node name="Marker3D7" type="Marker3D" parent="MapAreas/Area2/GravesMinigame/MarkersNode" unique_id=1180672205]
+transform = Transform3D(-5.7320566e-15, -1.3113416e-07, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, 1.3113416e-07, -1.1999989, 5.999999, 8.999999)
+
+[node name="Marker3D8" type="Marker3D" parent="MapAreas/Area2/GravesMinigame/MarkersNode" unique_id=1749291037]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.700001, 0, 11.6)
+
+[node name="MathyMinigame" parent="MapAreas/Area2" unique_id=515635210 instance=ExtResource("30_l1mv1")]
+
+[node name="Marker3D1" parent="MapAreas/Area2/MathyMinigame/MarkersNode" parent_id_path=PackedInt32Array(515635210, 2017397563) index="0" unique_id=20731385]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 8.799999, 1.5999999, 9.400001)
+
+[node name="Marker3D2" parent="MapAreas/Area2/MathyMinigame/MarkersNode" parent_id_path=PackedInt32Array(515635210, 2017397563) index="1" unique_id=938708994]
+transform = Transform3D(-1.9670125e-08, 0.45, -1.9670125e-08, 0, -1.9670125e-08, -0.45, -0.45, -1.9670125e-08, 8.5980843e-16, -1.9303818, 7.2384987, 0)
+
+[node name="Marker3D3" parent="MapAreas/Area2/MathyMinigame/MarkersNode" parent_id_path=PackedInt32Array(515635210, 2017397563) index="2" unique_id=1040186885]
+transform = Transform3D(3.934025e-08, 0.9, -5.9402124e-15, 0.9, -3.934025e-08, -1.3589623e-07, -1.3589623e-07, 0, -0.9, 12.199997, 1.0726519, -7.094158)
+
+[node name="Marker3D4" parent="MapAreas/Area2/MathyMinigame/MarkersNode" parent_id_path=PackedInt32Array(515635210, 2017397563) index="3" unique_id=1742730620]
+transform = Transform3D(-0.0636213, 0, 0.07715135, 0, 0.1, 0, -0.07715135, 0, -0.0636213, -11.964344, 0.26319203, -9.379919)
+
+[node name="Marker3D5" parent="MapAreas/Area2/MathyMinigame/MarkersNode" parent_id_path=PackedInt32Array(515635210, 2017397563) index="4" unique_id=707567541]
+transform = Transform3D(-1.5298985e-08, 0, 0.35, 0, 0.35, 0, -0.35, 0, -1.5298985e-08, 4.346878, 0.9068193, 0.010693133)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MapAreas/Area2" unique_id=2051123781]
+stream = ExtResource("21_8y65o")
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=114862461]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2074271842]
+layer = 990
 
 [node name="PixelationShaderOverlay" type="ColorRect" parent="CanvasLayer" unique_id=1160224522]
 material = ExtResource("11_lw7m8")
@@ -1020,4 +1086,6 @@ mouse_filter = 2
 [connection signal="pressed" from="MapAreas/Area1/IntroButton3D" to="MapAreas/Area1" method="_on_intro_button_3d_pressed"]
 [connection signal="body_entered" from="MapAreas/Area1/PlayerLeavingTriggerArea" to="MapAreas/Area1" method="_on_player_leaving_trigger_area_body_entered"]
 [connection signal="body_entered" from="MapAreas/Area2/PlayerEnteringTriggerArea" to="MapAreas/Area2" method="_on_player_entering_trigger_area_body_entered"]
-[connection signal="page_unlocked" from="MapAreas/Area2/QuestBook" to="MapAreas/Area2" method="_on_quest_book_page_unlocked"]
+[connection signal="page_explored" from="MapAreas/Area2/QuestBook" to="MapAreas/Area2" method="_on_quest_book_page_explored"]
+
+[editable path="MapAreas/Area2/MathyMinigame"]

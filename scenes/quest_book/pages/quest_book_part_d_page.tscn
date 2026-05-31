@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bgtqv0xcvncsj"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_l10nl"]
+
+[node name="QuestBookPartDPage" unique_id=1413710666 instance=ExtResource("1_l10nl")]
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Finding the unencrypted secret code: Section 7:[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=723672315]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "On November 17, 1989, a bloody attack took place at an URSSAF building in Paris.
+A Frenchman, unhappy about paying “far too much in taxes” as he put it, blamed his disillusionment on the URSSAF. Unfortunately for us, he lived just 15 meters from one of our centers.
+
+Seized by a vengeful and murderous rage, he killed eight employees in cold blood.
+Although he was taken into custody (and released two days later), we still celebrate the courage of these deceased employees who continued to work, even though death awaited them.
+They are examples to follow.
+
+To pay tribute to these heroes, the secret code asks that we remember them."
+autowrap_mode = 3
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=169055064]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "There are 8 tombstones in the room, each bearing the name of one of the deceased employees.
+Each one will be described; it’s up to you to identify the right person and retrieve the index from the correct tombstone—a small number ranging from 1 to 8.
+
+To determine which one to choose, the answer will be revealed after the descriptions."
+autowrap_mode = 3

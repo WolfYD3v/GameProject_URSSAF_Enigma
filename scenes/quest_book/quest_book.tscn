@@ -15,6 +15,21 @@
 [ext_resource type="PackedScene" uid="uid://dhj8q5ijavnhv" path="res://scenes/quest_book/pages/quest_book_part_a_page.tscn" id="13_bvli4"]
 [ext_resource type="PackedScene" uid="uid://ck1egf2tdtyh8" path="res://scenes/quest_book/pages/quest_book_part_b_page.tscn" id="14_44s0a"]
 [ext_resource type="PackedScene" uid="uid://b5brm4hjvanvt" path="res://scenes/quest_book/pages/quest_book_part_c_page.tscn" id="15_frbyq"]
+[ext_resource type="PackedScene" uid="uid://bgtqv0xcvncsj" path="res://scenes/quest_book/pages/quest_book_part_d_page.tscn" id="16_aeb78"]
+[ext_resource type="PackedScene" uid="uid://cuuyv1cqhlpbj" path="res://scenes/quest_book/pages/quest_book_part_e_page.tscn" id="17_y56lo"]
+[ext_resource type="PackedScene" uid="uid://d0lw10cis8yp7" path="res://scenes/quest_book/pages/quest_book_part_f_page.tscn" id="18_jlcp8"]
+[ext_resource type="PackedScene" uid="uid://dyvh2vrsywdol" path="res://scenes/quest_book/pages/quest_book_part_g_page.tscn" id="19_sw65u"]
+[ext_resource type="PackedScene" uid="uid://bv0utud2enr3f" path="res://scenes/quest_book/pages/quest_book_part_h_page.tscn" id="20_a1ixv"]
+[ext_resource type="PackedScene" uid="uid://cayd2aaqkg80r" path="res://scenes/quest_book/pages/quest_book_part_i_page.tscn" id="21_dwr54"]
+[ext_resource type="PackedScene" uid="uid://c16g7kdd71k7r" path="res://scenes/quest_book/pages/quest_book_part_j_page.tscn" id="22_gn1cr"]
+[ext_resource type="PackedScene" uid="uid://bqd3s47j12iif" path="res://scenes/quest_book/pages/quest_book_part_k_page.tscn" id="23_awnt8"]
+[ext_resource type="PackedScene" uid="uid://b5cvlp188tdlg" path="res://scenes/quest_book/pages/quest_book_part_l_page.tscn" id="24_awnt8"]
+[ext_resource type="PackedScene" uid="uid://dibfycsu3apip" path="res://scenes/quest_book/pages/quest_book_encourgment_2_page.tscn" id="25_n7aty"]
+[ext_resource type="PackedScene" uid="uid://bchbcrk8nby5l" path="res://scenes/quest_book/pages/quest_book_encourgment_3_page.tscn" id="26_4jbs2"]
+[ext_resource type="PackedScene" uid="uid://hpck2jps7ytl" path="res://scenes/quest_book/pages/quest_book_encourgment_4_page.tscn" id="27_1bcld"]
+[ext_resource type="PackedScene" uid="uid://d3lyti7u0tpig" path="res://scenes/quest_book/pages/quest_book_encyption_a_page.tscn" id="28_1bcld"]
+[ext_resource type="PackedScene" uid="uid://bh3rpnk3i2qm1" path="res://scenes/quest_book/pages/quest_book_encyption_b_page.tscn" id="29_srmy7"]
+[ext_resource type="PackedScene" uid="uid://brsfgb8vowv6i" path="res://scenes/quest_book/pages/quest_book_last_page.tscn" id="30_srmy7"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_7rh4n"]
 left_to_right = 1.0
@@ -208,6 +223,51 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="QuestBookPartCPage" parent="GUI/Pages" unique_id=1703335738 instance=ExtResource("15_frbyq")]
+layout_mode = 1
+
+[node name="QuestBookPartDPage" parent="GUI/Pages" unique_id=1215960981 instance=ExtResource("16_aeb78")]
+layout_mode = 1
+
+[node name="QuestBookPartEPage" parent="GUI/Pages" unique_id=309993046 instance=ExtResource("17_y56lo")]
+layout_mode = 1
+
+[node name="QuestBookEncourgment2Page" parent="GUI/Pages" unique_id=1769674814 instance=ExtResource("25_n7aty")]
+layout_mode = 1
+
+[node name="QuestBookPartFPage" parent="GUI/Pages" unique_id=1651652158 instance=ExtResource("18_jlcp8")]
+layout_mode = 1
+
+[node name="QuestBookPartGPage" parent="GUI/Pages" unique_id=1022494220 instance=ExtResource("19_sw65u")]
+layout_mode = 1
+
+[node name="QuestBookPartHPage" parent="GUI/Pages" unique_id=900048021 instance=ExtResource("20_a1ixv")]
+layout_mode = 1
+
+[node name="QuestBookPartIPage" parent="GUI/Pages" unique_id=1465760106 instance=ExtResource("21_dwr54")]
+layout_mode = 1
+
+[node name="QuestBookPartJPage" parent="GUI/Pages" unique_id=1146214206 instance=ExtResource("22_gn1cr")]
+layout_mode = 1
+
+[node name="QuestBookPartKPage" parent="GUI/Pages" unique_id=835221624 instance=ExtResource("23_awnt8")]
+layout_mode = 1
+
+[node name="QuestBookPartLPage" parent="GUI/Pages" unique_id=462427841 instance=ExtResource("24_awnt8")]
+layout_mode = 1
+
+[node name="QuestBookEncourgment3Page" parent="GUI/Pages" unique_id=1340049283 instance=ExtResource("26_4jbs2")]
+layout_mode = 1
+
+[node name="QuestBookEncyptionAPage" parent="GUI/Pages" unique_id=1667686546 instance=ExtResource("28_1bcld")]
+layout_mode = 1
+
+[node name="QuestBookEncyptionBPage" parent="GUI/Pages" unique_id=517651382 instance=ExtResource("29_srmy7")]
+layout_mode = 1
+
+[node name="QuestBookEncourgment4Page" parent="GUI/Pages" unique_id=445591207 instance=ExtResource("27_1bcld")]
+layout_mode = 1
+
+[node name="QuestBookLastPage" parent="GUI/Pages" unique_id=1223055021 instance=ExtResource("30_srmy7")]
 layout_mode = 1
 
 [node name="Buttons" type="HBoxContainer" parent="GUI" unique_id=612413034]

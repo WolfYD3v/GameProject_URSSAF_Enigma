@@ -14,9 +14,9 @@ var numbers_list: String = "0123456789"
 var suffled_base_64_associations: Dictionary[int, int] = {}
 
 func _ready() -> void:
-	_select_cryptography_mathods()
+	pass
 
-func _select_cryptography_mathods() -> void:
+func select_cryptography_mathods() -> void:
 	var temp_cryptography_methods: Array[String] = cryptography_methods.duplicate()
 	var cryptography_method_picked: String = ""
 	
@@ -25,6 +25,12 @@ func _select_cryptography_mathods() -> void:
 		cryptography_method_picked = temp_cryptography_methods.pick_random()
 		temp_cryptography_methods.erase(cryptography_method_picked)
 		_seleted_cryptography_methods.append(cryptography_method_picked)
+	
+	if DenuvoLikeShit.normal_gamemode:
+		var _reversed_seleted_cryptography_methods = _seleted_cryptography_methods.duplicate()
+		_reversed_seleted_cryptography_methods.reverse()
+		print(_reversed_seleted_cryptography_methods)
+		_seleted_cryptography_methods.append_array(_reversed_seleted_cryptography_methods)
 
 func super_encrypt(text: String) -> String:
 	print("\nEncrypting with %d method(s): %s ..." % [

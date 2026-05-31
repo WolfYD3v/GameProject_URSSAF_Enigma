@@ -2,17 +2,16 @@
 
 [ext_resource type="AudioStream" uid="uid://kk6mgvqssk8h" path="res://assets/voices/intro_voice.mp3" id="1_41qgp"]
 [ext_resource type="Script" uid="uid://dj21pqcaitn1b" path="res://scenes/diego/diego.gd" id="1_x3ea8"]
-[ext_resource type="Material" uid="uid://grblthfy2o7y" path="res://assets/materials/metal_material.tres" id="2_107h3"]
 [ext_resource type="AudioStream" uid="uid://c3sjqkbkst66y" path="res://assets/sfxs/explosion_sfx.wav" id="4_goqte"]
 [ext_resource type="Material" uid="uid://bqixq16fa7c31" path="res://assets/materials/brown_material.tres" id="4_opipt"]
 [ext_resource type="PackedScene" uid="uid://u04c5w01w4kq" path="res://scenes/diego/diego_dialog_box.tscn" id="4_tbakm"]
 [ext_resource type="Material" uid="uid://cyr0ex347isvp" path="res://assets/materials/black_material.tres" id="5_opipt"]
 [ext_resource type="VideoStream" uid="uid://dsxvp782rt3qo" path="res://assets/videos/240092.ogv" id="7_soa7m"]
 [ext_resource type="PackedScene" uid="uid://dwtxilurp5xgk" path="res://scenes/file_tool/file_tool.tscn" id="9_b3ayj"]
+[ext_resource type="PackedScene" uid="uid://bmtm35lgi5jkr" path="res://assets/models/diego/diego_model.tscn" id="9_vk2ni"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_4bdai"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_41qgp"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_b3ayj"]
+size = Vector3(2, 2, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tbakm"]
 size = Vector3(0.8, 1.35, 0.02)
@@ -48,12 +47,11 @@ size = Vector2(3, 3)
 [node name="Diego" type="StaticBody3D" unique_id=707562888]
 script = ExtResource("1_x3ea8")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1561013754]
-material_override = ExtResource("2_107h3")
-mesh = SubResource("CapsuleMesh_4bdai")
+[node name="DiegoModel" parent="." unique_id=2102286300 instance=ExtResource("9_vk2ni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=344029043]
-shape = SubResource("CapsuleShape3D_41qgp")
+shape = SubResource("BoxShape3D_b3ayj")
 
 [node name="VoiceAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1006379298]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
@@ -74,22 +72,22 @@ emission_angle_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
 
 [node name="BackPart1" type="MeshInstance3D" parent="Infos" unique_id=1486516273]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19999999)
 material_override = ExtResource("4_opipt")
 mesh = SubResource("BoxMesh_tbakm")
 
 [node name="DiegoIssuesTextMesh" type="MeshInstance3D" parent="Infos" unique_id=42482805]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.31323814)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18676186)
 material_override = ExtResource("5_opipt")
 mesh = SubResource("TextMesh_tbakm")
 
 [node name="BackPart2" type="MeshInstance3D" parent="Infos" unique_id=1745945400]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.90000004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.42061728)
 material_override = ExtResource("4_opipt")
 mesh = SubResource("BoxMesh_tbakm")
 
 [node name="DiegoCopyTextMesh" type="MeshInstance3D" parent="Infos" unique_id=540015760]
-transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 0, 0, -0.91155535)
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 0, 0, -0.4321726)
 material_override = ExtResource("5_opipt")
 mesh = SubResource("TextMesh_ioaqi")
 

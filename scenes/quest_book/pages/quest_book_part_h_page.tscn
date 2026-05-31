@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bv0utud2enr3f"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_5mt5w"]
+[ext_resource type="Script" uid="uid://6ecsp7m6ue1g" path="res://scenes/quest_book/pages/quest_book_part_h_page.gd" id="2_dny58"]
+
+[node name="QuestBookPartHPage" unique_id=1413710666 instance=ExtResource("1_5mt5w")]
+script = ExtResource("2_dny58")
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Finding the unencrypted secret code: Section 9:[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1928539183]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "You solved a Wordle, which was actually pretty easy. But you didn't solve the custom Wordle in the safe.
+The rules:
+- Unlimited attempts
+- 20 characters to find
+- Only upper characters (A to Z) are allowed
+- Two clues: A character placed at the right place are indicated as green, and as red for the opposite
+- Fear the copyright claim coming right in your ass ;)
+
+The sequence you found must be part of the unencrypted secret code."
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=257204555]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="SolveWordleButton" type="Button" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="4" unique_id=1227136719]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Solve this Wordle"
+
+[connection signal="pressed" from="Left/MarginContainer/Nodes/SolveWordleButton" to="." method="_on_solve_wordle_button_pressed"]

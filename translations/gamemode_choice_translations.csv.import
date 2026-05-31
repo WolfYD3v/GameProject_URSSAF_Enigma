@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://civff4yj8tr1g"
+
+[deps]
+
+files=["res://translations/gamemode_choice_translations.fr.translation", "res://translations/gamemode_choice_translations.en.translation"]
+
+source_file="res://translations/gamemode_choice_translations.csv"
+dest_files=["res://translations/gamemode_choice_translations.fr.translation", "res://translations/gamemode_choice_translations.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

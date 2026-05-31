@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dibfycsu3apip"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_whl26"]
+[ext_resource type="Texture2D" uid="uid://c26ffphl13moc" path="res://assets/textures/quest_book_encouragments/quest_book_encouragment_2.jpg" id="2_ih7qd"]
+
+[node name="QuestBookEncourgment2Page" unique_id=1413710666 instance=ExtResource("1_whl26")]
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Here’s a little note of encouragement from management, just for you![/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1034077234]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Is grilling more than just a hobby for you?
+If so, this image is made for you!"
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=268804443]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_ih7qd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SeparationArea2" type="ColorRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="4" unique_id=2034268567]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)

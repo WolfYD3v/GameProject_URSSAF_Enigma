@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b78ecrl1k0sse"]
+
+[ext_resource type="Theme" uid="uid://dlr20ytminx68" path="res://assets/themes/quest_book_theme.tres" id="1_roehw"]
+[ext_resource type="Script" uid="uid://dotkh5jhmmue0" path="res://scenes/my_wordle/my_wordle_case/my_wordle_case.gd" id="2_vv565"]
+
+[node name="MyWordleCase" type="ColorRect" unique_id=2004375184]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_roehw")
+script = ExtResource("2_vv565")
+
+[node name="Label" type="Label" parent="." unique_id=1692869754]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1

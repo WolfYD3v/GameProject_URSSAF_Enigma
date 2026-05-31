@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://d3lyti7u0tpig"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_n7tf3"]
+[ext_resource type="Script" uid="uid://d4ejtphsq51ac" path="res://scenes/quest_book/pages/quest_book_encyption_a_page.gd" id="2_g3bk4"]
+[ext_resource type="PackedScene" uid="uid://dwtxilurp5xgk" path="res://scenes/file_tool/file_tool.tscn" id="3_sfm3q"]
+
+[node name="QuestBookEncyptionAPage" unique_id=1413710666 instance=ExtResource("1_n7tf3")]
+script = ExtResource("2_g3bk4")
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Part 2: Encryption[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1217518612]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "As mentioned earlier, the code is encrypted to make it as secure as possible.
+You’ve already figured out the correct unencrypted secret code (I hope). But the safe only accepts the encrypted version of the code—encrypted BY the safe.
+There’s just one tiny problem: You need to know the order of encryption and which methods were used.
+But I’ll help you—don’t panic. The safe uses an encryption module with five pre-programmed methods to encrypt the secret code. And this module chooses five methods from the five it knows. So it chooses them all.
+As for the encryption order, since it’s random, you either have to try all 25 possible combinations and hope the encrypted code works. Or I can give it to you.
+That would be better, wouldn’t it (especially if you’re playing in hardcore mode—if you know what I mean). You can download a file containing this order if you want. With a little puzzle thrown in—why not? This game already artificially drags on—why stop now?
+I barely have time to code a rock-paper-scissors game as it is...
+
+The encryption methods are explained on the following pages."
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=1933801890]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="GetEncryptionOrderButton" type="Button" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="4" unique_id=1075061125]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Get Encryption Order"
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=112752959]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Method 1:[/u] Upper Lower Characters[/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=85743238]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "This method was created by WolfY_D3v, but he doesn't believe it's his own creation.
+This method only affects letters (a/A -> z/Z). Only the letters are encrypted; everything else remains unchanged.
+It's simple: lowercase letters become uppercase, and vice versa."
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=1797331246]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TitleRichTextLabel2" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=1476304901]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Method 2:[/u] Cesar[/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="6" unique_id=899629838]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "This method only affects letters (a/A -> z/Z). Only the letters are encrypted; everything else remains unchanged.
+There are 26 letters in the alphabet, and all the letters are simply shifted clockwise. If you shift the letter W by 10, you get the letter G."
+autowrap_mode = 3
+
+[node name="SeparationArea3" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="7" unique_id=932490194]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TitleRichTextLabel3" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="8" unique_id=2005821169]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Method 3:[/u] Suffled Base64[/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="9" unique_id=331355675]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "This method only affects all characters.
+It does two things:
+- It encodes the secret code in Base64
+- Then it scrambles the encoded characters
+So it’s up to you to encode the code in Base64, then scramble the characters yourself just like the safe did.
+
+But you don’t need to figure out how it was done—a file contains everything you need to know to shuffle the characters correctly."
+autowrap_mode = 3
+
+[node name="FileTool" parent="." index="3" unique_id=1806613440 instance=ExtResource("3_sfm3q")]
+
+[connection signal="pressed" from="Left/MarginContainer/Nodes/GetEncryptionOrderButton" to="." method="_on_get_encryption_order_button_pressed"]

@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bh3rpnk3i2qm1"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_yjd3j"]
+[ext_resource type="Script" uid="uid://dvt0qdaogfg8t" path="res://scenes/quest_book/pages/quest_book_encyption_b_page.gd" id="2_wcusj"]
+[ext_resource type="PackedScene" uid="uid://dwtxilurp5xgk" path="res://scenes/file_tool/file_tool.tscn" id="3_nej2p"]
+
+[node name="QuestBookEncyptionBPage" unique_id=1413710666 instance=ExtResource("1_yjd3j")]
+script = ExtResource("2_wcusj")
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+visible = false
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=723159184]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "On the other hand, it’s not small.
+And I think there’s just one line you need to understand to use it properly. The safe expects you to get the logic. But I know you can do it—you’ve got what it takes!
+We’re just going to talk about indexes and “char”. It’s simple:
+if we have the string “ozcfgh” and you're asked for the “character at index” where index is 3, you're actually being asked for “f”. Because:
+_______________________________
+Characters | o | z | c | f  | g | h
+Indexes      | 0 | 1 | 2 | 3 | 4 | 5
+_______________________________"
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=1112431184]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="GetBigFileButton" type="Button" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="4" unique_id=216205752]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Get File"
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=1233820120]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Method 4:[/u] Wolfy Numbers Offuscation[/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=452868149]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "This method was created by WolfY_D3v, but he doesn't believe it's his own creation.
+Only the digits are affected (1–9). The rest of the code remains unchanged.
+This method first lists all the digits, then performs mathematical operations.
+Concrete example: 8, 1, 4, 0, 2, 5, 2, and 7 are the digits. But the encrypted digits are: 7, 6, 4, 7, 6, 3, 4, and 8. Why?
+
+Because, let’s imagine we want to encrypt the first digit, the 8. We do: {digit to convert} - {next digit}. So here, 8 - 1.
+When we get to encrypting the last digit, we do: {digit to convert} - {first digit listed}. So here, 7 - 8.
+If the result is negative, as with 1 - 4, we do: subtraction_result = 9 + {subtraction_result}. So: 9 + (-3), subtraction_result = 6."
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=1066275984]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TitleRichTextLabel2" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=358053349]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Method 5:[/u] Mono-Alphabetic Substitution[/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="6" unique_id=1287539838]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "For this method, you'll have to look it up online; I can't explain it.
+But it only applies to the letters, not the rest.
+A file will be downloaded if you click this button.
+Just make sure to keep the capital letters, even if there are some in the file. "
+autowrap_mode = 3
+
+[node name="SeparationArea3" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="7" unique_id=891787110]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="GetFileButton" type="Button" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="8" unique_id=657377642]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Get File"
+
+[node name="FileTool" parent="." index="3" unique_id=1806613440 instance=ExtResource("3_nej2p")]
+
+[connection signal="pressed" from="Left/MarginContainer/Nodes/GetBigFileButton" to="." method="_on_get_big_file_button_pressed"]
+[connection signal="pressed" from="Right/MarginContainer/Nodes/GetFileButton" to="." method="_on_get_file_button_pressed"]

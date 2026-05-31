@@ -1,0 +1,1 @@
+mono_alphabetic_substitution > upper_lower_characters > suffled_base_64 > {from the first file provided by Diego} > wolfy_numbers_offuscation > wolfy_numbers_offuscation > {from the first file provided by Diego} > suffled_base_64 > upper_lower_characters > mono_alphabetic_substitution > END

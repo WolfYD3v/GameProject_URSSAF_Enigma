@@ -11,12 +11,15 @@ var http_request: HTTPRequest = null
 var timer: Timer = null
 var requesting: bool = false
 var first_check: bool = true
+
+var normal_gamemode: bool = false
+
+var baby_message: String = "The server is not reachable. Check your Internet connection and re-launch the game.\n\nIn case the problem persists, well can't help."
+var normal_message: String = "So, if I understand correctly, your computer isn't connected, and you want to play a game protected by some crappy Chinese version of Denuvo.\nYou're either an idiot or you're doing this on purpose.\n\nRestart the game once you've left the Stone Age."
  
 func _ready() -> void:
 	_spawn_http_request()
 	_spawn_timer()
-	
-	if not OS.get_name() == "Web": start_checking()
 
 func _spawn_http_request() -> void:
 	http_request = HTTPRequest.new()
@@ -47,10 +50,13 @@ func request_complete(_result, response_code, _headers, _body):
 		if not connected and first_check: connected = true
 		if connected:
 			print("Denuvo Like Shit - Player Disconnected")
+			var message: String = baby_message
+			if normal_gamemode: message = normal_message
 			OS.alert(
-				"The server is not reachable. Check your Internet connection and re-launch the game.\n\nIn case the problem persists, well can't help.",
+				message,
 				"URSSAF Enigma"
 			)
+			if normal_gamemode: OS.alert("What a moron...", "WolfY_D3v")
 			get_tree().quit()
 		connected = false
 	

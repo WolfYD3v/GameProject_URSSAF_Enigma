@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://hpck2jps7ytl"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_ye46k"]
+[ext_resource type="Texture2D" uid="uid://c1fejpd5qe30h" path="res://assets/textures/quest_book_encouragments/quest_book_encouragment_3.jpg" id="2_2lok0"]
+[ext_resource type="Script" uid="uid://bxkx5vdis3h0y" path="res://scenes/quest_book/pages/quest_book_encourgment_4_page.gd" id="2_bvgju"]
+[ext_resource type="PackedScene" uid="uid://dwtxilurp5xgk" path="res://scenes/file_tool/file_tool.tscn" id="4_gc0go"]
+
+[node name="QuestBookEncourgment4Page" unique_id=1413710666 instance=ExtResource("1_ye46k")]
+script = ExtResource("2_bvgju")
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Here’s a little note of encouragement from management, just for you![/u][/b]"
+
+[node name="TextureRect" type="TextureRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1106696696]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_2lok0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SeparationArea2" type="ColorRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=1467641446]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=1097258435]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "So, it looks like someone has a crush on you.
+\"Diego likes you, you know. He just doesn't have the guts to tell you.
+You probably see him as that weirdo who speaks a strange language and treats you like dirt. And that’s true. But in the break room, all we hear are good things about you. He admires your intelligence; he thinks you’re essential to our team. You’re the only one who’s come this far, and he knows it.
+Diego’s a good guy—he even wants to have a kid with you! But don’t tell him that; he wants to keep it a secret.
+Despite his hater, tough-guy persona, he loves you. He even left you a little message full of hope for your future at URSSAF.
+All the pleasure is yours.\"
+- John Doe"
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=4529987]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ListenButton" type="Button" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=1639661010]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Listen"
+
+[node name="FileTool" parent="." index="3" unique_id=1806613440 instance=ExtResource("4_gc0go")]
+
+[connection signal="pressed" from="Right/MarginContainer/Nodes/ListenButton" to="." method="_on_listen_button_pressed"]

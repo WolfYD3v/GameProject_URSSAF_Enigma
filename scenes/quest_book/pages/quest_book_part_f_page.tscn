@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://d0lw10cis8yp7"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_cyka5"]
+[ext_resource type="Texture2D" uid="uid://l54emajib66a" path="res://assets/textures/quest_book_encouragments/quest_book_CEO.jpg" id="2_ivq4w"]
+
+[node name="QuestBookPartFPage" unique_id=1413710666 instance=ExtResource("1_cyka5")]
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+visible = false
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1014691669]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Victim No. ???: Julien M.
+This guy was way too weird. He always showed up early for work, and he sat in the same chair in the break room every day. He’d say, “Have a nice rest of your day, you high-and-mighty human,” whenever one of his coworkers stopped by for a coffee.
+Thank goodness that guy got killed...
+
+Victim No. ???: The Well-Known CEO"
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=258776929]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="PetTextureRect" type="TextureRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="4" unique_id=399248068]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_ivq4w")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SeparationArea3" type="ColorRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="5" unique_id=1625969781]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=1959593896]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Victim No. ???: You?
+Diego has decided to add you to the list of victims.
+I don't think he likes you."
+autowrap_mode = 3

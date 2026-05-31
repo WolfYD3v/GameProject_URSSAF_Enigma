@@ -13,7 +13,6 @@ func _ready() -> void:
 	$GUISubViewport/Him.hide()
 	$GUISubViewport/Him.modulate = Color(1.0, 1.0, 1.0, 0.0)
 	
-	get_tree().paused = true
 	setup_song()
 	main_menu_2d_interface.animate()
 

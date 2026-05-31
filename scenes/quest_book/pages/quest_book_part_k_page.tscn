@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bqd3s47j12iif"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_2jntf"]
+
+[node name="QuestBookPartKPage" unique_id=1413710666 instance=ExtResource("1_2jntf")]
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Rules to Follow[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1186512340]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "-> Being a gay knight is forbidden
+-> Having an OF is mandatory
+-> Math problems must result in a chocolate bar with neon green sugar and butter
+-> Dividing is like snacking. But blindfolded, with brittle bone disease
+-> If it’s wrong, it’s not right. And you shouldn’t do it
+-> Unless we’re talking about neon green buttered sugar
+-> Diego T-poses, I Tree-pose, and Julius Caesar Jul-poses
+-> This artifact is sponsored by Raid Shadow Legend!"
+autowrap_mode = 3
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=980946977]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]The Single-Digit Theory[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=1484911806]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "71 is a non-allergenic no, 8 is a real apple pie.
+But how do you make this dish of water and oil without serving the dogs a bottle of gasoline?
+
+In the case of 62 + 22, you see 3
+In the case of 96 - 41, we just see 0
+And in 23 * 45, we see 2"
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=1090861932]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TitleRichTextLabel2" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=2100673342]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]The Order of the Binary Orange Night Eagle[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="6" unique_id=1035993065]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "“An angel at 134.9 degrees southwest dancing the water dance on the Titanic will live longer than a sea lion on a skateboard,” said an old Chinese master when speaking of order in society.
+These words are more valuable than when Mickey brings his house back up from the Underworld.
+
+And according to Bruce Lee, the order mentioned here is MATHEMATICAL!!!! He told the Terminator about this MATHEMATICAL order!!!!
+Here it is:
+(___) < * < +, -"
+autowrap_mode = 3

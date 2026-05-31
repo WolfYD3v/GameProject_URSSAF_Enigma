@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://brsfgb8vowv6i"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_kw1u8"]
+[ext_resource type="Texture2D" uid="uid://chwllscdd3e0i" path="res://assets/textures/quest_book_encouragments/Dog-Crying-Meme-Green-Screen--2938666430.png" id="2_xo76o"]
+
+[node name="QuestBookLastPage" unique_id=1413710666 instance=ExtResource("1_kw1u8")]
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Opening the Safe: The End?[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=487733697]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Unfortunately, yes. It’s already over.
+We can mourn our great departed, indeed. But if you look on the bright side, you’ll pee less.
+Go. Go open that safe. A wonderful surprise awaits you behind that metal door, now within your reach.
+
+Goodbye, my friend.
+- The book"
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=264743359]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_xo76o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=1587934152]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)

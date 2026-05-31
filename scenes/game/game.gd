@@ -3,18 +3,16 @@ class_name Game
 
 @onready var label: Label = $Interface/Label
 
-@export var do_password_stuff: bool = true
-
-const DEV_INTRO_PACKED_SCENE: PackedScene = preload("res://scenes/menus/dev_intro_menu/dev_intro_menu.tscn")
+const GAMEMODE_CHOICE_PACKED_SCENE: PackedScene = preload("res://scenes/menus/gamemode_choice/gamemode_choice.tscn")
 
 var label_texts_array: Array[String] = [
-	"Generating something...",
-	"Doing some background work...",
+	"Generating something soon...",
+	"Doing some background work soon...",
 	"Tried to rick roll you, but failed.\nwhat a shame...",
-	"Travail dur !",
+	"Travail dur ! (soon)",
 	"A banger for table 12 coming up!",
 	"Entrée 6 sur %d de la liste sélectionnée" % 11,
-	"Je cook de l'aléatoire Walter",
+	"Je cook de l'aléatoire Walter (soon)",
 	"1 chance sur 50 que le title screen soit différent ;)",
 	"Yeah.",
 	"I will encrypt a String soon",
@@ -24,15 +22,6 @@ var label_texts_array: Array[String] = [
 func _ready() -> void:
 	label.text = label_texts_array.pick_random()
 	
-	if do_password_stuff:
-		SecretCodeManager.generate()
-		await SecretCodeManager.secret_code_generated
-	else:
-		SecretCodeManager._raw_secret_code = "NO_PASSWORD"
-		SecretCodeManager._encrypted_secret_code = "NO_PASSWORD"
-	print("\nThe raw secret code is: %s" % SecretCodeManager._raw_secret_code)
-	print("The encrypted secret code is: %s" % SecretCodeManager._encrypted_secret_code)
-	
-	SceneManager.add_scene("DevIntro", DEV_INTRO_PACKED_SCENE)
-	SceneManager.replace_scene("DevIntro")
+	SceneManager.add_scene("GamemodeChoice", GAMEMODE_CHOICE_PACKED_SCENE)
+	SceneManager.replace_scene("GamemodeChoice")
 	get_tree().root.get_node("Game").queue_free()

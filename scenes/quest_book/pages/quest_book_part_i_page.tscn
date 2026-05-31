@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cayd2aaqkg80r"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_mt7y6"]
+
+[node name="QuestBookPartIPage" unique_id=1413710666 instance=ExtResource("1_mt7y6")]
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Finding the unencrypted secret code: Section 10:[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=943749404]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "An arcade machine has just appeared in the room. If you win the game, you'll get the rest of the secret code."
+autowrap_mode = 3
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=532576257]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Finding the unencrypted secret code: Section 11:[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=1292822037]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Ah, math—everyone loves it. Even the safe loves doing math.
+It’s so passionate about it that it’s delved into the most advanced mathematical concepts in the field. It’s even created its own way of calculating!
+It’s included its creation in the unencrypted secret code, so I have to explain its… thing… with concrete examples… of its… weird stuff."
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=1421408522]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Label2" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=610049957]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "For example, here are three calculations:
+-> 45 + 80 = 8
+-> 92 - 21 = 6
+-> 33 * 91 = 9
+(no division—it doesn't work here)"
+autowrap_mode = 3
+
+[node name="SeparationArea3" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="6" unique_id=1532505813]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Label3" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="7" unique_id=2058795439]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "None of this makes any sense, does it?
+As for the safe, yeah, that makes sense.
+Luckily, he wrote some sort of manual—it’s not very clear or easy to read.
+Do you want to read it?"
+autowrap_mode = 3

@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://dhqegmtc0lw0m"]
+
+[ext_resource type="Script" uid="uid://cdjjpuw0percs" path="res://scenes/anti_cheat_alert/anti_cheat_alert.gd" id="1_mmiuw"]
+[ext_resource type="Theme" uid="uid://dlr20ytminx68" path="res://assets/themes/quest_book_theme.tres" id="2_vy25p"]
+[ext_resource type="Texture2D" uid="uid://b1qv54sa5xgun" path="res://assets/textures/him.png" id="3_a8kx3"]
+[ext_resource type="AudioStream" uid="uid://cy8redjl4o7fg" path="res://assets/songs/The real jeopardy waiting think music - Jeopardy warte musik.mp3" id="4_a8kx3"]
+[ext_resource type="Shader" uid="uid://dia371l2uj7do" path="res://assets/shaders/pixelation_shader.gdshader" id="4_ydt4a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mvq6q"]
+shader = ExtResource("4_ydt4a")
+shader_parameter/pixelation = 0.0010000000475
+shader_parameter/opacity = 1.0
+
+[node name="AntiCheatAlert" type="Window" unique_id=1094808687]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(500, 500)
+unresizable = true
+extend_to_title = true
+minimize_disabled = true
+maximize_disabled = true
+content_scale_mode = 1
+content_scale_aspect = 4
+script = ExtResource("1_mmiuw")
+
+[node name="Control" type="Control" parent="." unique_id=177313410]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vy25p")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=544636319]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5882353, 0.5882353, 0.5882353, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2097253909]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_a8kx3")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Control" unique_id=692619190]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 75
+text = "10.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control" unique_id=2070997552]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Game Window Not Focused !"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="Control" unique_id=507320317]
+material = SubResource("ShaderMaterial_mvq6q")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect3" type="ColorRect" parent="Control" unique_id=1038602161]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=789288834]
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1386182311]
+stream = ExtResource("4_a8kx3")
+autoplay = true
+parameters/looping = true
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

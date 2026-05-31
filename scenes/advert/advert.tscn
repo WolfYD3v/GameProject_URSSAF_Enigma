@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dvgkl1lo2wr52"]
+
+[ext_resource type="Script" uid="uid://cfjr3rm7y8qr1" path="res://scenes/advert/advert.gd" id="1_ydadb"]
+
+[node name="Advert" type="Window" unique_id=1896307536]
+oversampling_override = 1.0
+title = "Advert"
+position = Vector2i(0, 36)
+size = Vector2i(250, 150)
+unresizable = true
+extend_to_title = true
+minimize_disabled = true
+maximize_disabled = true
+content_scale_mode = 1
+content_scale_aspect = 4
+script = ExtResource("1_ydadb")
+adverts = Array[String](["res://assets/textures/quest_book_encouragments/quest_book_cat.jpg", "res://assets/textures/quest_book_encouragments/quest_book_dog.jpg", "res://assets/textures/quest_book_encouragments/quest_book_gb.jpg"])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1777209717]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

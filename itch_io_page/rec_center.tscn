@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://btqqyxfi1a7gj"]
+
+[ext_resource type="Script" uid="uid://c2rnnnwhqknm6" path="res://itch_io_page/rec_center.gd" id="1_bi7gs"]
+[ext_resource type="PackedScene" uid="uid://bmtm35lgi5jkr" path="res://assets/models/diego/diego_model.tscn" id="1_ro06v"]
+[ext_resource type="Environment" uid="uid://bekbo647gqq44" path="res://assets/envs/urssaf_building_env.tres" id="2_d7yma"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ro06v"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bi7gs"]
+size = Vector3(10, 10, 0.2)
+
+[node name="RecCenter" type="Node3D" unique_id=1295172592]
+script = ExtResource("1_bi7gs")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=710106324]
+environment = ExtResource("2_d7yma")
+
+[node name="Camera" type="Camera3D" parent="." unique_id=249711180]
+
+[node name="DiegoModel" parent="." unique_id=2102286300 instance=ExtResource("1_ro06v")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1, -1.5999999)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1962573147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.1000004)
+material_override = SubResource("StandardMaterial3D_ro06v")
+mesh = SubResource("BoxMesh_bi7gs")

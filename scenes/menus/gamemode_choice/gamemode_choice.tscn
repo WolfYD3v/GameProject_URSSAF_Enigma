@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://df3w3c41g3mpn"]
+
+[ext_resource type="FontFile" uid="uid://burlv4lfllmjb" path="res://assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf" id="1_7yq2d"]
+[ext_resource type="Script" uid="uid://cfofopvisfvkj" path="res://scenes/menus/gamemode_choice/gamemode_choice.gd" id="2_6mp5k"]
+
+[sub_resource type="Theme" id="Theme_6mp5k"]
+default_font = ExtResource("1_7yq2d")
+default_font_size = 25
+
+[node name="GamemodeChoice" type="Control" unique_id=826589715]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_6mp5k")
+script = ExtResource("2_6mp5k")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1408319396]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1321348584]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 35
+
+[node name="NodesContainer" type="VBoxContainer" parent="MarginContainer" unique_id=507105659]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="TitleText" type="RichTextLabel" parent="MarginContainer/NodesContainer" unique_id=898050479]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/normal_font_size = 35
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "[u][b]TITLE[/b][/u] gamemode"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="NormalModeText" type="RichTextLabel" parent="MarginContainer/NodesContainer" unique_id=981979710]
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "NORMAL_MODE_TEXT"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer/NodesContainer" unique_id=483942087]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="BabyModeButton" type="Button" parent="MarginContainer/NodesContainer/ButtonsContainer" unique_id=1806106486]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "EASY_GM"
+
+[node name="NormalModeButton" type="Button" parent="MarginContainer/NodesContainer/ButtonsContainer" unique_id=1218187626]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "HARDCORE_GM"
+
+[node name="ContinueButton" type="Button" parent="MarginContainer/NodesContainer" unique_id=1258059361]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = ">>>"
+
+[node name="LockMouse" type="ColorRect" parent="." unique_id=571860369]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="mouse_entered" from="MarginContainer/NodesContainer/ButtonsContainer/BabyModeButton" to="." method="_on_baby_mode_button_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/NodesContainer/ButtonsContainer/BabyModeButton" to="." method="_on_baby_mode_button_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/NodesContainer/ButtonsContainer/BabyModeButton" to="." method="_on_baby_mode_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/NodesContainer/ButtonsContainer/NormalModeButton" to="." method="_on_normal_mode_button_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/NodesContainer/ButtonsContainer/NormalModeButton" to="." method="_on_normal_mode_button_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/NodesContainer/ButtonsContainer/NormalModeButton" to="." method="_on_normal_mode_button_pressed"]
+[connection signal="pressed" from="MarginContainer/NodesContainer/ContinueButton" to="." method="_on_continue_button_pressed"]

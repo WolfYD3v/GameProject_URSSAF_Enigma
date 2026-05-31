@@ -20,7 +20,6 @@ albedo_texture = SubResource("ViewportTexture_kx65a")
 size = Vector2(3.5, 2)
 
 [node name="MainMenu" type="Node3D" unique_id=1195924135]
-process_mode = 3
 script = ExtResource("1_kx65a")
 
 [node name="GUI" type="MeshInstance3D" parent="." unique_id=2076394283]
@@ -34,6 +33,7 @@ canvas_item_default_texture_filter = 0
 size = Vector2i(1152, 648)
 
 [node name="MainMenu2DInterface" parent="GUISubViewport" unique_id=1759126058 instance=ExtResource("3_gm7d7")]
+process_mode = 0
 
 [node name="Him" type="Control" parent="GUISubViewport" unique_id=378661926]
 custom_minimum_size = Vector2(500, 0)

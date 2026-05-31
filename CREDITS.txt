@@ -13,11 +13,20 @@ Quest Book:
 	[ https://cdn.pixabay.com/photo/2014/03/14/20/13/dog-287420_1280.jpg ]
 	[ https://2.bp.blogspot.com/_L7Mo2vA1xZU/TTncHZDS06I/AAAAAAAAAEg/3vMIE9YVeRk/s1600/gato_21.JPG ]
 	[ https://images.saymedia-content.com/.image/t_share/MTk5NjY3NTAwODk0NDYzNjE2/bob-ross.jpg ]
+	[ https://i.imgflip.com/a0p1mm.jpg ]
+	[ https://acadienouvelle-6143.kxcdn.com/wp-content/uploads/2024/08/Web_Grillades.jpg ]
+	[ https://sourcesofinsight.com/wp-content/uploads/2022/10/Best-Motivational-Quotes.jpg ]
+	[ https://greenscreenmemes.com/wp-content/uploads/2024/02/Dog-Crying-Meme-Green-Screen-.png ]
 
+Models:
+- Diego: "Skeleton Rigged Model" [ https://rosyjoan.itch.io/skeleton-riggedmodel ]
+BY RosyJoan [ https://rosyjoan.itch.io/ ]
 
 Videos:
 - Diego Explosion: [ https://pixabay.com/videos/explosion-green-screen-fire-bomb-240090/ ]
 BY Luis_Humanoide [ https://pixabay.com/users/luis_humanoide-12661853/ ]
+- MyWordle Win Video: [ https://pixabay.com/fr/videos/confettis-confettis-de-droite-121985/ ]
+BY hirken8 [ https://pixabay.com/fr/users/hirken8-15545620/ ]
 
 Voices:
 - Diego: "Spanish skeleton argument (full version)" [ https://www.youtube.com/watch?v=yQbink5Zpps ]
@@ -37,6 +46,14 @@ BY MusicForPeople [ https://pixabay.com/fr/users/musicforpeople-54813385/ ]
 BY Meckavieira [ https://pixabay.com/fr/users/meckavieira-51704440/ ]
 - Cat Box Minigame Ambiance: "game 8 bit" [ https://pixabay.com/music/upbeat-game-8-bit-399898/ ]
 BY inono777 [ https://pixabay.com/users/inono777-52141374/ ]
+- Anti-cheat Alert Ambiance: "The real jeopardy waiting think music - Jeopardy warte musik" [ https://youtu.be/BtEkzZoUCpw ]
+BY Puppy Ricky [ https://www.youtube.com/@lovely_puppy_ricky ]
+WEBSITES USED:
+	mp3cow [ https://mp3cow.com/ ] -> Downloaded the video from Youtube on my laptop
+- MyWordle Ambiance: "Soda Pop" [ https://www.youtube.com/watch?v=y7CrvsCIjyo ]
+WEBSITES USED:
+	mp3cow [ https://mp3cow.com/ ] -> Downloaded the video from Youtube on my laptop
+	MODIFICATIONS: Modified with Audacity to Avoid Copyright Issues (for your stream it's better to not having a copyright issue)
 
 SFXs:
 - "JSFXR" [ https://sfxr.me/ ]
@@ -60,6 +77,9 @@ BY Okusama [ https://www.myinstants.com/en/profile/Okusama/uploaded/ ]
 BY Itsserena [ https://www.myinstants.com/en/profile/itsserena/uploaded/ ]
 	"Error SOUNDSS" [ https://www.myinstants.com/en/instant/error-soundss-25534/ ]
 BY Memeboiii [ https://www.myinstants.com/en/profile/MemeBoiii/uploaded/ ]
+MyWordle Win Yay:
+	"YAAAAAAAAY" [ https://www.myinstants.com/en/instant/yaaaaaaaay/ ]
+	"FNAF Yay Children" [ https://www.myinstants.com/en/instant/fnaf-yay-children-61698/ ]
 
 Fonts:
 - "Bricolage Grotesque" [ https://fonts.google.com/specimen/Bricolage+Grotesque?preview.script=Latn ]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cuuyv1cqhlpbj"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_u0ltg"]
+
+[node name="QuestBookPartEPage" unique_id=1413710666 instance=ExtResource("1_u0ltg")]
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+visible = false
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1374737659]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Victim No. ???: Lucy F.
+Lucy was a very diligent employee who was in charge of loading gold bars into the transfer vault.
+Her job was to collect the gold bars delivered to the building’s entrance and then transport them to the designated area.
+On the day of her death, she was carrying gold bars back and forth when she was killed.
+That day, she was wearing dark blue overalls with a T-shirt underneath. She had white socks on and low-heeled shoes. She was brave to work in such shoes. Her gait was steady, despite the sometimes absurd weight of what she was carrying.
+
+Victim No. ???: Paul R.
+Paul was an intern doing his ninth-grade internship for a week.
+He asked his supervisor questions, taking careful notes. He even took photos to include in his internship report.
+Then he and his supervisor were killed by that monster.
+
+Victim No. ???: The Supervisor
+He was old, grumpy, and he made really bad jokes about his wife’s butt. He had a few minor memory issues, but nothing crazy. Just forgetting his own name—his doctor said he was fine."
+autowrap_mode = 3
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=992997617]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Victim No. ???: Sally A.
+Sally Arnonds was a woman. But you definitely shouldn’t have told her that—even though she was actually a woman (her voice, her appearance, etc.), she felt like a unicorn. BUT a male unicorn—that’s different!
+She was wearing a classic outfit... ... well, that’s what everyone thought before that incident in the break room...
+
+Victim No. ???: Mark O.
+He liked to watch Boruto while he worked at the front desk. It was his favorite anime, “the best in the world, bro,” as he put it. Or “Better than that steaming pile of crap called Death Note.”
+He's the same guy who said Isekai is awesome...
+Despite that, he really embodied the spirit of the place:
+- A jaded, nonchalant greeting, as if you were interrupting him while he watched his SAO episode
+- Service that was anything but intuitive, and took forever
+- A bad day guaranteed for both sides, customers and staff alike!
+He was the first to be killed, right in the middle of a key battle in one of his Japanese anime. According to the killer, the service he received was too bad to just leave without killing 8 people."
+autowrap_mode = 3

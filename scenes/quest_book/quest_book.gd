@@ -1,7 +1,7 @@
 extends StaticBody3D
 class_name QuestBook
 
-signal page_unlocked(page_idx: int)
+signal page_explored(page_idx: int)
 
 @onready var gui: CanvasLayer = $GUI
 @onready var pages: Control = $GUI/Pages
@@ -16,6 +16,7 @@ var player: Player = null
 var current_page_idx: int = 0
 var max_pages_count: int = 0
 var max_page_idx_unlocked: int = 3
+var pages_already_explored: Array[int] = []
 
 func _ready() -> void:
 	if unlock_all_pages: max_page_idx_unlocked = pages.get_child_count() - 1
@@ -46,6 +47,7 @@ func take_a_look() -> void:
 	if gui.visible: Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else: Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	set_control_indication_visibility()
+	emit_page_explored_signal()
 	
 
 func init_pages() -> void:
@@ -78,6 +80,7 @@ func next_page() -> void:
 		current_page_idx + 1,
 		0, max_pages_count
 	)
+	emit_page_explored_signal()
 	set_page_visible(current_page_idx, true)
 	set_buttons_clickability()
 
@@ -87,6 +90,7 @@ func previous_page() -> void:
 		current_page_idx - 1,
 		0, max_pages_count
 	)
+	emit_page_explored_signal()
 	set_page_visible(current_page_idx, true)
 	set_buttons_clickability()
 
@@ -95,10 +99,14 @@ func unloack_next_page() -> void:
 		max_page_idx_unlocked + 1,
 		0, max_pages_count
 	)
-	page_unlocked.emit(max_page_idx_unlocked + 1)
 
 func set_control_indication_visibility() -> void:
 	control_indication.visible = player != null
+
+func emit_page_explored_signal():
+	if not current_page_idx in pages_already_explored:
+		pages_already_explored.append(current_page_idx)
+		page_explored.emit(current_page_idx + 1)
 
 func _on_player_detection_area_body_entered(body: Node3D) -> void:
 	if body is Player:

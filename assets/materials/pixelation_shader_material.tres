@@ -4,5 +4,5 @@
 
 [resource]
 shader = ExtResource("1_52kms")
-shader_parameter/pixelation = 0.0030000001425
+shader_parameter/pixelation = 0.0010000000475
 shader_parameter/opacity = 1.0

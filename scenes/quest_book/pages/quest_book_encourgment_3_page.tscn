@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bchbcrk8nby5l"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_qr4v5"]
+[ext_resource type="Texture2D" uid="uid://dsu2mwdandhp5" path="res://itch_io_page/itch_io_funny.png" id="2_plgie"]
+
+[node name="QuestBookEncourgment3Page" unique_id=1413710666 instance=ExtResource("1_qr4v5")]
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=1700089859]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_plgie")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=880093115]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)

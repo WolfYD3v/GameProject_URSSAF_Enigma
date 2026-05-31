@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dyvh2vrsywdol"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_ykfeo"]
+[ext_resource type="Script" uid="uid://fuppott7lexe" path="res://scenes/quest_book/pages/quest_book_part_g_page.gd" id="2_8rrr7"]
+
+[node name="QuestBookPartGPage" unique_id=1413710666 instance=ExtResource("1_ykfeo")]
+script = ExtResource("2_8rrr7")
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+text = "[b][u]Which grave should you choose?[/u][/b]"
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=392762685]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "The following description will help you decide—read carefully:"
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="3" unique_id=479774931]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Label2" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="4" unique_id=1809616135]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "[grave description]"
+autowrap_mode = 3
+
+[node name="TitleRichTextLabel1" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=25563624]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Finding the unencrypted secret code: Section 8:[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=691401963]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Oh, that was some nice encouragement you got there, after that somewhat complicated investigation.
+Let’s hope you didn’t make a mistake.
+BTW, the game developer wanted to put a picture of Jeffrey Epstein in the CEO’s spot, but he thought it was a bit inappropriate for a Jam. But he mentioned it, just in case it makes anyone laugh.
+
+Anyway, the rest is simple.
+Find the word from the English Wordle as it is/was when you started working on the secret code. You have to add the word you found in the code.
+If you are playing on the Web version, the answer is \"WordL\" ."
+autowrap_mode = 3

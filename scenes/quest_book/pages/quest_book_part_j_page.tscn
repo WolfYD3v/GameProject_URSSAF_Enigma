@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c16g7kdd71k7r"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_y6v63"]
+
+[node name="QuestBookPartJPage" unique_id=1413710666 instance=ExtResource("1_y6v63")]
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+visible = false
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=1723783406]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "You don't have a choice anyway...
+I'm not going to explain how I figured out his mess.
+
+So I'm just going to regurgitate his “documentation” for you. Okay?"
+autowrap_mode = 3
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=703886527]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "The Gray Knight stepped onto a salty plane, wearing a top hat on his silver feet. He is here to preach the Good Divine Word of God Red Bean: the creator of the new generation of mathematics. He is set to revolutionize the world of numbers.
+Inside this top hat, carried by the silver feet of the Gray Knight, as a preacher of the Divine Word of God Red Bean—the creator of the new generation of mathematics (which will revolutionize the world of numbers)—lies The Sacred Tablet of the New Rules that will revolutionize the world of numbers. A Sacred artifact, like the tablet of the 10 Commandments.
+
+The Gray Knight then pulls from his top hat, resting at his silver hooves, The Sacred Tablet of the New Rules that will revolutionize the world of numbers. A Sacred artifact, like the tablet of the 10 Commandments.
+He begins to read all the rules of The Sacred Tablet of New Rules that will revolutionize the world of numbers. A sacred artifact, like the tablet of the Ten Commandments. And to all those listening attentively."
+autowrap_mode = 3

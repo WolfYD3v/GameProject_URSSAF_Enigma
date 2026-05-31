@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b5cvlp188tdlg"]
+
+[ext_resource type="PackedScene" uid="uid://d34jc4hyher2e" path="res://scenes/quest_book/quest_book_page.tscn" id="1_wjpny"]
+[ext_resource type="Script" uid="uid://cyp8j3pnux811" path="res://scenes/quest_book/pages/quest_book_part_l_page.gd" id="2_w8aiq"]
+
+[node name="QuestBookPartLPage" unique_id=1413710666 instance=ExtResource("1_wjpny")]
+script = ExtResource("2_w8aiq")
+
+[node name="TitleRichTextLabel" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="1" unique_id=1098942946]
+visible = false
+
+[node name="Label1" type="Label" parent="Left/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1644936578) index="2" unique_id=826321473]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "This divine law, straight out of Grichka Bogdanoff’s mouth, devours the red stars and drinks the sky of the Red Sea.
+And like a filler episode of Naruto, the disappointing story of the purple lion continues without Leo opening his black mouth.
+
+The world wants to read the maps of water’s memory, the girls want to poop in a hotel, and I want to kill myself!"
+autowrap_mode = 3
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="2" unique_id=1864051735]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Here's the calculation you need to do. I think you get the logic—you're not stupid[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="3" unique_id=1267067237]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="SeparationArea2" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="4" unique_id=2053453424]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TitleRichTextLabel2" type="RichTextLabel" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="5" unique_id=1063290414]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b][u]Finding the unencrypted secret code: Section 12:[/u][/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="6" unique_id=1201381359]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "A pop-up will appear when you click the button below.
+Inside, you'll find a string of characters—you need to copy it. That's the last part of the unencrypted secret code.
+But we're not done yet ;)"
+autowrap_mode = 3
+
+[node name="SeparationArea3" type="ColorRect" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="7" unique_id=1965453367]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="PopupButton" type="Button" parent="Right/MarginContainer/Nodes" parent_id_path=PackedInt32Array(1257509253) index="8" unique_id=2025665636]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Pop da pop-up"
+
+[connection signal="pressed" from="Right/MarginContainer/Nodes/PopupButton" to="." method="_on_popup_button_pressed"]

@@ -24,12 +24,18 @@ Cryptographer="*uid://eadm0xp0fj0m"
 HexBinConvertor="*uid://ccm5e1dwyd73u"
 CaptchatsData="*uid://bp5bwba6ifwxo"
 DenuvoLikeShit="*uid://bxp26x1nns1ij"
+AdvertManager="*uid://118rbrd7raqf"
+AntiCheat="*uid://ogvryxv72hpl"
 
 [display]
 
 window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 
@@ -75,7 +81,7 @@ player_crouch_toggle={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translations/diego_translations.en.translation", "res://translations/diego_translations.fr.translation")
+locale/translations=PackedStringArray("res://translations/diego_translations.en.translation", "res://translations/diego_translations.fr.translation", "res://translations/gamemode_choice_translations.en.translation", "res://translations/gamemode_choice_translations.fr.translation")
 
 [physics]
 
